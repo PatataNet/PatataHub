@@ -1,0 +1,10 @@
+body {
+    background-image:url();
+    background-position:center ;
+    background-size: cover;
+    }
+    #a{
+    border-width: 30px;
+    background-color: rgb(250, 250, 250);
+    border-style: ridge;
+    }

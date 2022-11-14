@@ -1,0 +1,45 @@
+.body_backgorund 
+{
+    background-image: url('1.2/fondo.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#myCanvas
+{
+    border-width:10px;
+    background-color: white; 
+    border-style:ridge;
+}
+
+h2
+{
+	border-radius: 10px;
+	width: 200px;
+	height: 50px;
+	padding: 10px;
+ }
+h3
+{
+	border-radius: 5px;
+	width: 100px;
+	height: 50px;
+	padding: 10px;
+}
+span
+{
+	color: black;	
+}
+a
+{
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px;
+    float: left;
+    border-radius: 10px;
+}
+#head_info
+{
+	width: 600px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
