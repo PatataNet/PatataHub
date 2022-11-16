@@ -330,7 +330,7 @@
                     var particles2 = this.createClouds(this.layer6_color, 5);
                     layer6.addChild(particles2, this.replicate(particles2));
                 }
-		    else if (theme == "RandomLand"){
+		    else if (theme == "randomLand"){
                     //colors
                     this.layer1_color = "#E800FF"; //sky
                     this.layer2_color = "#00FF00"; //clouds
