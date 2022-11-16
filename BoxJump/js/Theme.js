@@ -330,6 +330,38 @@
                     var particles2 = this.createClouds(this.layer6_color, 5);
                     layer6.addChild(particles2, this.replicate(particles2));
                 }
+		    else if (theme == "Random world"){
+                    //colors
+                    this.layer1_color = "#E800FF"; //sky
+                    this.layer2_color = "#00FF00"; //clouds
+                    this.layer3_color = "#0027FF"; //landscape-1
+                    this.layer4_color = "#FF0000"; //landscape-2
+                    this.layer5_color = "#00FFE8"; //landscape-3
+                    this.layer6_color = "#ffffff"; //clouds
+                    this.main_color1 = "#ffffff"; //player
+                    this.main_color2 = "#1FFF00"; //selector 1
+                    this.main_color3 = "#FFF700"; //selector 2
+                    this.main_color4 = "#876515"; //map tile
+                    //layer 1
+                    var bgColor = new createjs.Shape();
+                    bgColor.graphics.beginFill(this.layer1_color).drawRect(0, -this.screenWidth, this.screenWidth*1.5, this.screenHeight*2);
+                    layer1.addChild(bgColor);
+                    //layer 2
+                    var particles = this.createClouds(this.layer2_color, 5);
+                    layer2.addChild(particles, this.replicate(particles));
+                    //layer 3
+                    var a = this.createWaves(this.layer3_color, this.screenHeight/2);
+                    layer3.addChild(a, this.replicate(a));
+                    //layer 4
+                    var b = this.createWaves(this.layer4_color, (this.screenHeight/2)+(this.box16*4));
+                    layer4.addChild(b, this.replicate(b));
+                    //layer 5
+                    var c = this.createWaves(this.layer5_color, (this.screenHeight/2)+(this.box16*8));
+                    layer5.addChild(c, this.replicate(c));
+                    //layer 6
+                    var particles2 = this.createClouds(this.layer6_color, 5);
+                    layer6.addChild(particles2, this.replicate(particles2));
+                }
 
                 //add everything to the main container
                 this.addChild(layer1,layer2,layer3,layer4,layer5,layer6);
