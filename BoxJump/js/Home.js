@@ -14,7 +14,7 @@
             this.screenHeight = window.Game.getHeight();
             this.box16 = window.Game.box16;
             this.rows = 10;
-            this.cols = 8; //change this every time 10 levels are added
+            this.cols = 9; //change this every time 10 levels are added
 
             this.setUI(true);
 		};
