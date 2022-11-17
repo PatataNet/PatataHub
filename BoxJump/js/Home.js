@@ -90,6 +90,7 @@
                 case(5): updateUI = window.Game.theme.setTheme("lightUniverse"); break;
                 case(6): updateUI = window.Game.theme.setTheme("voidWorld"); break;
 		case(7): updateUI = window.Game.theme.setTheme("randomLand"); break;
+		case(8): updateUI = window.Game.theme.setTheme("gumLand"); break;
             }
             if (updateUI == true) this.updateUIColor();
             return updateUI;
