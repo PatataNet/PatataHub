@@ -1,0 +1,2 @@
+var gdjs;(function(n){let a;(function(e){let i;(function(r){const s=new n.Logger("Spatial Sound");r.setSoundPosition=(p,t,c,g,l)=>{const o=p.getScene().getSoundManager().getSoundOnChannel(t);o?o.setSpatialPosition(c,g,l):s.error(`Cannot set the spatial position of a non-existing sound on channel ${t}.`)}})(i=e.spatialSound||(e.spatialSound={}))})(a=n.evtTools||(n.evtTools={}))})(gdjs||(gdjs={}));
+//# sourceMappingURL=spatialsoundtools.js.map
