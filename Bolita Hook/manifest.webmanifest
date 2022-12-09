@@ -1,0 +1,12 @@
+{
+  "name": "Bolita Hook",
+  "short_name": "Bolita Hook",
+  "id": "com.example.bounceandhook",
+  "description": "Control a ball, and make it bounce and hook through multiple levels to reach the end.\n\nControls:\n   Computer: Mouse left click\n   Touch screens: Touch and hold",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
