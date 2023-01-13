@@ -83,9 +83,56 @@
 <body data-gr-c-s-loaded="true" class="" style="">
 
 <script>
- Fullscreen()
+ function Fullscreen()
 {
-	 SetFullScreen(document)
+	if(CurrentlyInFullScreen())
+	{
+		ExitFullScreenMode(document)
+	}
+	else
+	{
+		SetFullScreen(document)
+	}
+}
+	
+	function CurrentlyInFullScreen() {
+    return (document ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement);
+}
+	
+	function SetFullScreen(elto) {
+    //Si no se soporta la API, ya ni lo intentamos
+    if (!FullScreenSupportEnabled()) return;
+    //Se prueba la variante apropiada según el navegador
+    try {
+        if (elto.requestFullscreen) {    //Empezando por la estándar
+            elto.requestFullscreen();
+        } else if (elto.webkitRequestFullscreen) {    //Webkit (Safari, Chrome y Opera 15+)
+            elto.webkitRequestFullscreen();
+        } else if (elto.mozRequestFullScreen) {    //Firefox
+            elto.mozRequestFullScreen();
+        } else if (elto.msRequestFullscreen) {    //Internet Explorer 11+
+            elto.msRequestFullscreen();
+        }
+    }
+    catch(ex) {
+        return false;
+    }
+    return true;
+}
+	
+	function ExitFullScreenMode(){
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+    } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+    }
 }
 </script>
 	
@@ -105,7 +152,7 @@
                     <li class="nav-item"><a href="#utiles&gsc.tab=0" class="nav-link">Utiles</a></li>
                     <li class="nav-item"><a href="#juegos&gsc.tab=0" class="nav-link">Juegos</a></li>
                     <li class="nav-item"><a href="#otro&gsc.tab=0" class="nav-link">Otro</a></li>
-		    <li class="nav-item"><a onClick="Fullscreen()" class="nav-link">Pantalla completa <img src="pantallacompleta.png" class="5 col-xs-12" width="32px" height="24px"></img></a></li>
+		    <li class="nav-item"><a onClick="Fullscreen()" class="nav-link">Pantalla completa</a></li>
                 </ul>
             </div>
         </nav>
