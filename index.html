@@ -17,12 +17,72 @@
 		
 <style type="text/css">
 ============================================================================================ */
-$borderRadius: 10px;
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 400;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 500;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 700;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 900;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+}	
+	
+	$borderRadius: 10px;
 $spacer: 1rem;
 $primary: #406ff3;
 $text: #6a778e;
-$linkHeight: $spacer * 5;
-$timing: 200ms;
+$linkHeight: $spacer * 3.5;
+$timing: 250ms;
 $transition: $timing ease all;
 
 @mixin gooeyEffect($i) {
@@ -65,7 +125,7 @@ body{
     span{
       position: absolute;
       left: 100%;
-      transform: translate(-($spacer*5));
+      transform: translate(-($spacer*3));
       margin-left: 1rem;
       opacity: 0;
       pointer-events: none;
@@ -138,66 +198,7 @@ body{
   }
   
 }
-============================================================================================ */
-@font-face {
-  font-weight: 400;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 400;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 500;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 500;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 700;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 700;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 900;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 900;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
-}	
+	
 		</style>
 </head>
 
@@ -290,18 +291,18 @@ function closeFullscreen() {
 			</div>
 		</div>
 		  <nav class="navbar">
-                <ul class="navbar-menu">
-		<li class="navbar__item">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
       <a href="#inicio&gsc.tab=0" class="navbar__link"><i data-feather="home"></i><span>Inicio</span></a>
     </li>
     <li class="navbar__item">
       <a href="#utiles&gsc.tab=0" class="navbar__link"><i data-feather="folder"></i><span>PatataApps</span></a>        
     </li>
     <li class="navbar__item">
-      <a href="#otro&gsc.tab=0" class="navbar__link"><i data-feather="help-circle"></i><span>Otro</span></a>        
+      <a href="#otro&gsc.tab=0" class="navbar__link"><i data-feather="help-circle"></i><span>Mas</span></a>        
     </li>
-                </ul>
-		    </nav>
+  </ul>
+</nav>
 	</section>
 
 	<!-- Sección acerca de mí -->
