@@ -232,6 +232,12 @@ h2:after {
 
             <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
+		    <ul class="navbar-nav ml-auto scrollspy">
+                    <li class="nav-item"><a href="#Web" class="nav-link active">Web</a></li>
+                    <li class="nav-item"><a href="#PC" class="nav-link">PC</a></li>
+		    <li class="nav-item"><a href="#Noticias" class="nav-link">Noticias</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Regresar</a></li>
+                </ul>
             </div>
     </div>
 
@@ -239,6 +245,7 @@ h2:after {
 
 <!-- Esquema de disposición principal -->
 <main class="content-3">
+	<section id="Web" class="home d-flex align-items-center">
 		  <div class="wrapper">
 <br><br><br><br>
 	<h2><strong>Web<span>( 15 )</span></strong></h2>
@@ -352,7 +359,8 @@ h2:after {
 		</figure>
 
 	</div>
-        
+			  </section>
+		<section id="PC" class="home d-flex align-items-center">
         <h2><strong>PC<span>( 3 )</span></strong></h2>
 
 	<div class="cards">
@@ -382,8 +390,9 @@ h2:after {
 		</figure>
 
 	</div>
-
-	<h2><strong>What's new?</strong></h2>
+		</section>
+			<section id="Noticias" class="home d-flex align-items-center">
+	<h2><strong>Noticias y actualizaciones</strong></h2>
 
 	<div class="news">
 
@@ -408,6 +417,7 @@ h2:after {
 	</div>
 
 </div>
+	</section>
 </main>
 
 <!-- Botón para ir a la parte superior -->
