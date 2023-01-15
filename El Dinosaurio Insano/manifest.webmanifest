@@ -1,0 +1,12 @@
+{
+  "name": "El dinosaurio insano",
+  "short_name": "El dinosaurio insano",
+  "id": "com.example.rundinorun",
+  "description": "The revamped version of Chrome's offline Dino runner.\n\nControls :\n   Computer : Up and Down arrow keys\n   Touch screens : Swipe up or down\n",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
