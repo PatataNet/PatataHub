@@ -1,2 +1,0 @@
-var gdjs;(function(a){const i=GlobalPIXIModule.PIXI;a.PixiFiltersTools.registerFilterCreator("Brightness",{makePIXIFilter:function(t,r){const e=new i.filters.ColorMatrixFilter;return e.brightness(1,!1),e},updatePreRender:function(t,r){},updateDoubleParameter:function(t,r,e){const n=t;r==="brightness"&&n.brightness(a.PixiFiltersTools.clampValue(e,0,1),!1)},updateStringParameter:function(t,r,e){},updateBooleanParameter:function(t,r,e){}})})(gdjs||(gdjs={}));
-//# sourceMappingURL=brightness-pixi-filter.js.map
