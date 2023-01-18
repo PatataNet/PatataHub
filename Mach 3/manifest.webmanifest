@@ -1,0 +1,12 @@
+{
+  "name": "Mach 3",
+  "short_name": "Mach 3",
+  "id": "com.example.bimbam",
+  "description": "",
+  "orientation": "portrait",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
