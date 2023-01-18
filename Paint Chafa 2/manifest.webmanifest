@@ -1,0 +1,12 @@
+{
+  "name": "Paint Chafa 2",
+  "short_name": "Paint Chafa 2",
+  "id": "com.example.paint",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
