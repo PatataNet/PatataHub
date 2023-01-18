@@ -1,0 +1,12 @@
+{
+  "name": "Buscaminas",
+  "short_name": "Buscaminas",
+  "id": "com.example.minesweeperexample",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
