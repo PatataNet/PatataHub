@@ -1,0 +1,15 @@
+{
+  "name": "Triangulo VS Cubo",
+  "short_name": "Triangulo VS Cubo",
+  "id": "com.example.turnbasedfighting",
+  "description": "",
+  "orientation": "any",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": [{
+        "src": "square-icon.png",
+        "sizes": "512x512"
+      }]
+}
