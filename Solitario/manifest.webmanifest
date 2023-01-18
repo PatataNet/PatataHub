@@ -1,0 +1,12 @@
+{
+  "name": "Solitario",
+  "short_name": "Solitario",
+  "id": "com.example.klondike",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
