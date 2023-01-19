@@ -83,31 +83,21 @@
 <body data-gr-c-s-loaded="true" class="" style="">
 
 <script>
-	/* Get the documentElement (<html>) to display the page in fullscreen */
-var elem = document.documentElement;
-
-/* View in fullscreen */
-function openFullscreen(document) {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-
-/* Close fullscreen */
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) { /* Safari */
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE11 */
-    document.msExitFullscreen();
+let fullscreen;
+let fsEnter = document.getElementById('fullscr');
+fsEnter.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (!fullscreen) {
+        fullscreen = true;
+        document.documentElement.requestFullscreen();
+        fsEnter.innerHTML = "Exit Fullscreen";
     }
-  }
-}
+    else {
+        fullscreen = false;
+        document.exitFullscreen();
+        fsEnter.innerHTML = "Go Fullscreen";
+    }
+});
 </script>
 	
 <!-- Encabezado de escritorio -->
@@ -127,6 +117,7 @@ function closeFullscreen() {
 		    <li class="nav-item"><a href="#otro&gsc.tab=0" class="nav-link">Mas</a></li>
                     <li class="nav-item"><a href="InicioPatataPedia.html" class="nav-link">PatataPedia</a></li>
 		    <li class="nav-item"><a href="PatataGamesInicio.html" class="nav-link">PatataGames</a></li>
+		    <li class="nav-item"><a id="fullscr" class="nav-link">PantallaCompleta</a></li>
                 </ul>
             </div>
         </nav>
