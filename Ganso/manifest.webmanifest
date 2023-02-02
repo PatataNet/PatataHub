@@ -1,0 +1,12 @@
+{
+  "name": "Functional Plant (Goose bomberman)",
+  "short_name": "Functional Plant (Goose bomberman)",
+  "id": "com.example.goosebomberman",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
