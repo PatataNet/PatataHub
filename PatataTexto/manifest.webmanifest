@@ -1,0 +1,12 @@
+{
+  "name": "PatataTexto",
+  "short_name": "PatataTexto",
+  "id": "com.example.UploadDownloadTextFile",
+  "description": "Allows users to upload/download text content to a filename and vice versa. \n(The current gdevelop only supports desktop version, this one is compatible with browsers)",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
