@@ -1,218 +1,126 @@
 <html>
-  <head>
-    <link rel="icon" type="image/png" href="me.png">
-    <title>Bienvenido a PatataHub!</title>
-    <META HTTP-EQUIV="REFRESH" CONTENT="11.5;URL=https://patatanet.github.io/PatataHub/inicio.html#gsc.tab=0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="style/bootstrap.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="style/all.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="style/slick.css" type="text/css" media="all">
-	<link rel="stylesheet" href="style/animate.css" type="text/css" media="all">
-	<link rel="stylesheet" href="style/style.css" type="text/css" media="all">
+	<head>
+	<link rel="icon" type="image/png" href="me.png">
+	<title>PatataHub</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- HOJAS DE ESTILO -->
+		
 <style type="text/css">
-      @font-face {
-				font-family: "open";
-				font-style: normal;
-				font-weight: 300;
-				src: local("Open Sans Light"), local("OpenSans-Light"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-@keyframes empty {
-  
-  0% {
-    transform: scale( 3 );
-  }
-  
-  100% {
-    transform: scale( 0 );
-  }
-  
-}
-
-@keyframes shake {
-  
-  0%, 100% {
-    transform: rotate( 0 );
-  }
-  
-  10%, 50%, 90% {
-    transform: rotate( 4deg );
-  }
-  
-  30%, 70% {
-    transform: rotate( -4deg );
-  }
-  
-}
-
-@keyframes moveLeft {
-  
-  100% {
-    left: 40%;
-  }
-  
-}
-
-@keyframes fave {
-  
-  0% {
-    opacity: 0;
-  }
- 
-  100% {
-    left: 45%;
-    opacity: 1;
-  }
-  
-}
-
-@keyframes fill {
-  
-  0% {
-    bottom: -100%;
-  }
-  
-  100% {
-    bottom: 0%;
-  }
-  
-}
-
-@keyframes goOut {
-  
-  100% {
-    opacity: 0;
-    top: 45%;
-  }
-  
-}
-
-@keyframes comeIn {
-  
-  0% {
-   opacity: 0;
-   top: 55%;
-  }
-  100% {
-    opacity: 1;
-    top: 45%;
-  }
-  
-}
-
-@keyframes copyrights {
-  
-  0% {
-   opacity: 0;
-   bottom: 0;
-  }
-  100% {
-    opacity: 1;
-    bottom: 5%;
-  }
-  
+  body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+  margin: 0rem;
+  overflow: hidden;
 }
 
 a {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: white;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+}
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* -- YouTube Link Styles -- */
+
+body.menu-toggled > .meta-link > span {
+  color: rgb(30, 30, 30);
+}
+
+#source-link {
+  bottom: 60px;
+}
+
+#source-link > i {
+  color: rgb(94, 106, 210);
+}
+
+#yt-link > i {
+  color: rgb(239, 83, 80);
+}
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;  
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
   text-decoration: none;
-  color: inherit;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: open, 'sans-serif', sans;
-  background: #ffff;
-  overflow: hidden;
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.bg {
-  background: #002790;
-  width: 50vw;
-  height: 50vw;
-  border-radius: 50%;
-  top: 50%;
-  margin-top: -25vw;
-  margin-left: -25vw;
-  left: 50%;
-  position: absolute;
-  animation: empty both 5s linear;
+.meta-link > i, .meta-link > span {
+  height: 20px;
+  line-height: 20px;
 }
 
-.anetwork {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -23px;
-  margin-left: -23px;
-  width: 46px;
-  box-shadow: 0 2px 2px rgba( 0, 0, 0, .5 );
-  height: 46px;
-  background: #ffff;
-  overflow: hidden;
-  animation: shake .25s linear 20, moveLeft both .7s ease-in-out 5.5s, goOut forwards .6s ease 8s;
+.meta-link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
 }
-.anetwork:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scale( 1.2 );
-  height: 100%;
-  background: #002790;
-  border-radius: 75px 75px 0 0 / 30px 30px 0 0;
-  animation: fill both 5s linear;
-}
-.anetwork:after {
-  content: '';
-  color: #fff;
-  font: 42px tahoma, arial, sans-serif;
-  position: absolute;
-  right: -2px;
-  bottom: -12px;
-}
+	
+</style>
+		
+</head>
+<body data-gr-c-s-loaded="true" class="" style="">
+	<script>
+		const letters = "ABCDEFGIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890|@#~€¬!";
 
-.text {
-  color: #002790;
-  text-shadow: 0 1px 0 #fff;
-  font-size: 22px;
-  position: absolute;
-  left: 55%;
-  top: 50%;
-  margin-top: -2%;
-  /* Fave = Fade N move :D */
-  animation: fave .7s both ease-in-out 5.5s, goOut forwards .6s ease 8s;
-}
+let interval = null;
 
-.copyright {
-  font-size: 16px;
-  color: #666;
-  text-shadow: 0 -1px 0 #f1f1f1;
-  position: absolute;
-  left: 5%;
-  bottom: 5%;
-  animation: copyrights .5s ease both 6.5s;
+document.querySelector("a").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 68)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 60);
 }
+	</script>
+  <main class="content-3">
+    
+<a data-value="PatataHub" href="https://patatanet.github.io/PatataHub/inicio.html#gsc.tab=0">p@t4tAHu3</a>
+	  
+  </main>
 
-.finish {
-  position: absolute;
-  left: 45%;
-  color: #888;
-  font-size: 18px;
-  animation: comeIn both .5s ease 8.5s;
-}
-    </style>
-  </head>
-  <body>
-<div class="bg"></div>
-<a href="https://patatanet.github.io/PatataHub/inicio.html" class="anetwork"></a>
-<div class="text"><a href="https://patatanet.github.io/PatataHub/inicio.html">Bienvenido a PatataHub!</a></div>
-
-<div class="finish"><a href="https://patatanet.github.io/PatataHub/inicio.html">Iniciando :D</a></div>
-  </body>
-  </html>
+</body>
+</html>
