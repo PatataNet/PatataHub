@@ -4,7 +4,7 @@ const letters = '/ABCDEFGIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890|
 
 let interval = null;
 
-document.querySelector('a').onmouseover = (event) => {
+function cambiar() {
   let iteration = 0;
 
   clearInterval(interval);
@@ -27,4 +27,4 @@ document.querySelector('a').onmouseover = (event) => {
 
     iteration += 1 / 6;
   }, 60);
-};
+}
