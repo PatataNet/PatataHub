@@ -87,13 +87,13 @@ h2 strong {
   background: #24282f;
 }
 .PatataGames {
-  font-size: 40px;
+  font-size: 50px;
 }
 .Plataforma {
-  font-size: 30px;
+  font-size: 35px;
 }
 .Coleccion {
-  font-size: 25px;
+  font-size: 20px;
 }
 h2 span {
   color: #aaa;
@@ -234,13 +234,23 @@ h2:after {
 
 .juego {
   float: left;
-  background-color: #F6E3CA;
+  background-color: #363636;
   margin-right: 10px;
   border: #D7C8B6 2px solid;
 }
 
+.texto {
+  opacity: 0;
+  font-family: 'Alegreya Sans';
+  padding: 10px;
+  padding-left: 25px;
+  color: #FFFFFF;
+}
+	
 .juego:hover {
   transform: scale(0.95);
+  .texto:opacity: 1;
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
 }
 		</style>
 </head>
