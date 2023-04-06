@@ -242,13 +242,15 @@ h2:after {
 .texto {
   opacity: 0;
   font-family: 'Alegreya Sans';
-  z-order: 10000;
+  z-index: 10000;
   color: #FFFFFF;
 }
 	
+.juego .texto:hover {
+   opacity: 1;
+}
 .juego:hover {
   transform: scale(0.95);
-  .texto:opacity: 1;
   transform: translateY(-3px) scale(1.05) rotateX(15deg);
 }
 		</style>
