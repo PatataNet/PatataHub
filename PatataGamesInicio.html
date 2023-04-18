@@ -17,22 +17,14 @@
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
-	
+
 .abs,
-h2:after,
-.cards .card figcaption,
-.cards .card:after,
-.news .card figcaption,
-.news .card:after,
-.news .article figcaption {
+h2:after {
   position: absolute;
 }
 .rel,
 h2,
-h2 strong,
-.cards .card,
-.news .card,
-.news .article {
+h2 strong {
   position: relative;
 }
 .fix {
@@ -50,7 +42,9 @@ h2 strong,
 .dn {
   display: none;
 }
-.df,
+.df {
+  display: flex;
+}
 .dif {
   display: inline-flex;
 }
@@ -82,14 +76,10 @@ h2 {
 h2 strong {
   z-index: 2;
   background: #24282f;
-}
-.PatataGames {
-  font-size: 50px;
-}
-.Plataforma {
-  font-size: 35px;
+  padding: 4px 8px;
 }
 h2 span {
+  font-size: 0.7em;
   color: #aaa;
   margin-left: 10px;
 }
@@ -102,6 +92,13 @@ h2:after {
   left: 0;
   right: 0;
   background: #373d47;
+}
+
+.PatataGames {
+  font-size: 50px;
+}
+.Plataforma {
+  font-size: 35px;
 }
 
 .listaJuegos {
