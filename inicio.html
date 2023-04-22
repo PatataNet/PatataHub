@@ -13,6 +13,27 @@
 
 	<link rel="stylesheet" href="style/style.css" type="text/css" media="all">
 <link rel="stylesheet" href="https://www.unpkg.com/tailwindcss@1.8.10/dist/tailwind-experimental.min.css" type="text/css" media="all">
+<style>
+  ::-webkit-scrollbar {
+    display: none;
+	}
+  
+  h3764 {
+  -webkit-animation: shift-hue 20s infinite linear;
+  animation: shift-hue 20s infinite linear;
+}
+
+@keyframes shift-hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(-360deg);
+    filter: hue-rotate(-360deg);
+  }
+}
+</style>
 <div class="flex text-gray-800 min-h-screen">
   <aside class="hidden md:block bg-white px-6 py-5 h-full w-full sm:relative sm:w-64 lg:w-1/5">
     <a href="#" class="flex min-w-max-content items-center font-bold text-lg p-2 mb-12">
@@ -79,7 +100,7 @@
     <main class="flex flex-col space-y-10 px-6 py-5 max-w-6xl mx-auto">
       <h1 class="text-3xl">
         <span class="text-gray-500">Bienvenido a</span>
-        <span class="font-semibold">PatataHub</span>    
+        <span class="font-semibold"><h3764 class="relative z-10 text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-600">PatataHub</h3764></span>    
       </h1>
       <section>
         <div class="flex justify-between items-center mb-6">
@@ -93,25 +114,28 @@
         </div>
         <div class="h-64 bg-white border rounded-lg shadow-md py-4 px-6">
     <h4 class="my-0 title">
-                    <a href="PaintChafita/">Paint Chafa</a>
+                    <a href="PatataGamesInicio">PatataGames</a>
                 </h4>
 		<h4 class="my-0 title">
                     <a href="InicioPatataPedia">PatataPedia</a>
                 </h4>
             <br>
 		<h4 class="my-0 title">
-                    <a href="PatataGamesInicio">PatataGames</a>
+                    <a href="PaintChafita/">Paint Chafa</a>
                 </h4>
+    </h4>
 		<h4 class="my-0 title">
-                    <a href="Noticias">Noticias</a>
+                    <a href="Paint Chafa 2/">Paint Chafa 2</a>
                 </h4>
             <br>
 		<h4 class="my-0 title">
                     <a href="Patatatexto/">Editor de texto</a>
                 </h4>
 		<h4 class="my-0 title">
-                    <a href="Paint Chafa 2/">Paint Chafa 2</a>
+                    <a href="Noticias">Noticias</a>
                 </h4>
+		
+			<br><br><br><br><br><br>
         </div>
       </section>
     </main>
