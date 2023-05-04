@@ -22,11 +22,11 @@
     display: none;
 	}	
 	
-	#myList li {
+#my-list li {
   display: none;
 }
 
-#myList li.show {
+#my-list li.show {
   display: block;
 }
 	
@@ -148,19 +148,20 @@ h2:after {
 <body data-gr-c-s-loaded="true" class="" style="">
 	
 	<script>
-	const searchInput = document.getElementById('searchInput');
-const myList = document.getElementById('myList');
+const input = document.getElementById('search-input');
+const list = document.getElementById('my-list');
+const items = list.getElementsByTagName('li');
 
-searchInput.addEventListener('keyup', () => {
-  const filter = searchInput.value.toUpperCase();
-  const li = myList.getElementsByTagName('li');
+input.addEventListener('keyup', function() {
+  const filter = input.value.toLowerCase();
 
-  for (let i = 0; i < li.length; i++) {
-    const text = li[i].textContent.toUpperCase();
-    if (text.indexOf(filter) > -1) {
-      li[i].classList.add('show');
+  for (let i = 0; i < items.length; i++) {
+    const text = items[i].textContent.toLowerCase();
+
+    if (text.includes(filter)) {
+      items[i].classList.add('show');
     } else {
-      li[i].classList.remove('show');
+      items[i].classList.remove('show');
     }
   }
 });
@@ -179,6 +180,7 @@ searchInput.addEventListener('keyup', () => {
                 <ul class="navbar-nav ml-auto scrollspy"> 
                     <li class="nav-item"><a href="inicio" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">Regresar</a></li>
 		    <li class="nav-item"><a href="PatataGamesPC" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">PC</a></li>
+		    <li class="nav-item"><input type="text" id="search-input" placeholder="Buscar"></li>
                 </ul>
             </div>
         </nav>
@@ -192,9 +194,9 @@ searchInput.addEventListener('keyup', () => {
 <br><br><br><br>
 	<div class="wrapper">  
 		<br><br><br>
-		<input type="text" id="searchInput" placeholder="Buscar...">
+		<input type="text" id="search-input" placeholder="Buscar">
 		<br>
-		<ul class="listaJuegos" id="myList">
+		<ul class="listaJuegos" id="my-list">
 		<li class="Juego"><a href="PepeCraft/pepecraft"><img src="Juegos/pepecraft.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">PepeCraft</a></a>pepecraft</li>
 		<li class="Juego"><a href="MicroBugiado/html"><img src="Juegos/microBugueado.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Micro Bugueado</a></a>micro bugueado</li>
 		<li class="Juego"><a href="Filtros/"><img src="Juegos/filtros.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Filtros Chafas</a></a>filtros chafas</li>
