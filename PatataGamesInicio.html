@@ -22,6 +22,14 @@
     display: none;
 	}	
 	
+	#myList li {
+  display: none;
+}
+
+#myList li.show {
+  display: block;
+}
+	
 .abs {
   position: absolute;
 }
@@ -140,26 +148,19 @@ h2:after {
 <body data-gr-c-s-loaded="true" class="" style="">
 	
 	<script>
-	// Obtener el elemento de entrada y la lista
-var input = document.getElementById("myInput");
-var ul = document.getElementById("myUL");
+	const searchInput = document.getElementById('searchInput');
+const myList = document.getElementById('myList');
 
-// Agregar un evento de entrada para actualizar la lista
-input.addEventListener("input", function() {
-  // Obtener la consulta de búsqueda y convertirla a minúsculas
-  var query = input.value.toLowerCase();
-  
-  // Obtener todos los elementos de la lista
-  var items = ul.getElementsByTagName("li");
-  
-  // Iterar sobre los elementos y mostrar u ocultar según la búsqueda
-  for (var i = 0; i < items.length; i++) {
-    var item = items[i];
-    var text = item.innerText.toLowerCase();
-    if (text.includes(query)) {
-      item.style.display = "block";
+searchInput.addEventListener('keyup', () => {
+  const filter = searchInput.value.toUpperCase();
+  const li = myList.getElementsByTagName('li');
+
+  for (let i = 0; i < li.length; i++) {
+    const text = li[i].textContent.toUpperCase();
+    if (text.indexOf(filter) > -1) {
+      li[i].classList.add('show');
     } else {
-      item.style.display = "none";
+      li[i].classList.remove('show');
     }
   }
 });
@@ -191,9 +192,9 @@ input.addEventListener("input", function() {
 <br><br><br><br>
 	<div class="wrapper">  
 		<br><br><br>
-		<input type="text" id="myInput" placeholder="Buscar...">
+		<input type="text" id="searchInput" placeholder="Buscar...">
 		<br>
-		<ul class="listaJuegos" id="myUL">
+		<ul class="listaJuegos" id="myList">
 		<li class="Juego"><a href="PepeCraft/pepecraft"><img src="Juegos/pepecraft.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">PepeCraft</a></a>pepecraft</li>
 		<li class="Juego"><a href="MicroBugiado/html"><img src="Juegos/microBugueado.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Micro Bugueado</a></a>micro bugueado</li>
 		<li class="Juego"><a href="Filtros/"><img src="Juegos/filtros.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Filtros Chafas</a></a>filtros chafas</li>
