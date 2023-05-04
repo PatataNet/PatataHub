@@ -155,9 +155,7 @@ input.addEventListener("input", function() {
   // Iterar sobre los elementos y mostrar u ocultar según la búsqueda
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
-    var axd1 = ul.item.getElementsByTagName("a");
-    var axd2 = ul.item.axd1.getElementsByTagName("a");
-    var text = item.axd1.axd2.toLowerCase();
+    var text = item.innerText.toLowerCase();
     if (text.includes(query)) {
       item.style.display = "block";
     } else {
@@ -196,15 +194,15 @@ input.addEventListener("input", function() {
 		<input type="text" id="myInput" placeholder="Buscar...">
 		<br>
 		<ul class="listaJuegos" id="myUL">
-		<li class="Juego"><a href="PepeCraft/pepecraft"><img src="Juegos/pepecraft.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">PepeCraft</a></a></li>
-		<li class="Juego"><a href="MicroBugiado/html"><img src="Juegos/microBugueado.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Micro Bugueado</a></a></li>
-		<li class="Juego"><a href="Filtros/"><img src="Juegos/filtros.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Filtros Chafas</a></a></li>
-		<li class="Juego"><a href="AdivinaElDibujo/"><img src="Juegos/dibujo.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Adivinar el dibujo de google apis</a></a></li>
-		<li class="Juego"><a href="BoxJump/"><img src="Juegos/BoxJump.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">BoxJump</a></a></li>
-		<li class="Juego"><a href="dino"><img src="Juegos/dino.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">dino</a></a></li>
-		<li class="Juego"><a href="Pong/"><img src="Juegos/pong.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Pong</a></a></li>
-		<li class="Juego"><a href="Pong Circular/"><img src="Juegos/Pong Circular.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Pong Circular</a></a></li>
-		<li class="Juego"><a href="Moto X3M/"><img src="Juegos/motox3m.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Moto X3M Chafa</a></a></li>
+		<li class="Juego"><a href="PepeCraft/pepecraft"><img src="Juegos/pepecraft.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">PepeCraft</a></a>pepecraft</li>
+		<li class="Juego"><a href="MicroBugiado/html"><img src="Juegos/microBugueado.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Micro Bugueado</a></a>micro bugueado</li>
+		<li class="Juego"><a href="Filtros/"><img src="Juegos/filtros.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Filtros Chafas</a></a>filtros chafas</li>
+		<li class="Juego"><a href="AdivinaElDibujo/"><img src="Juegos/dibujo.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Adivinar el dibujo de google apis</a></a>adivinar el dibujo de google apis</li>
+		<li class="Juego"><a href="BoxJump/"><img src="Juegos/BoxJump.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">BoxJump</a></a>boxjump</li>
+		<li class="Juego"><a href="dino"><img src="Juegos/dino.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">dino</a></a>dino</li>
+		<li class="Juego"><a href="Pong/"><img src="Juegos/pong.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Pong</a></a>pong</li>
+		<li class="Juego"><a href="Pong Circular/"><img src="Juegos/Pong Circular.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Pong Circular</a></a>pong circular</li>
+		<li class="Juego"><a href="Moto X3M/"><img src="Juegos/motox3m.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Moto X3M Chafa</a></a>moto x3m chafa</li>
 		<li class="Juego"><a href="Space Asteroid/"><img src="Juegos/spaceAsteroid.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Space Asteroid</a></a></li>
 		<li class="Juego"><a href="Tappy Plane/"><img src="Juegos/tappyPlane.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Tappy Plane</a></a></li>
 		<li class="Juego"><a href="Plinko/"><img src="Juegos/plinko.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Plinko</a></a></li>
