@@ -9,9 +9,9 @@ input.addEventListener('keyup', function() {
     const text = items[i].textContent.toLowerCase();
 
     if (text.includes(filter)) {
-      items[i].classList.add('show');
+      items[i].style.display = 'block';
     } else {
-      items[i].classList.remove('show');
+      items[i].style.display = 'none';
     }
   }
 });
