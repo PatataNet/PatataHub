@@ -149,13 +149,16 @@ const input = document.getElementById('search-input');
 const list = document.getElementById('my-list');
 const items = list.getElementsByTagName('li');
 
-input.addEventListener('keyup', function() {
+buscar() {
   const filter = input.value.toLowerCase();
 
   for (let i = 0; i < items.length; i++) {
-    const text = items[i].textContent.toLowerCase();
+    const text = items[i];
+    const a1 = text.getElementsByTagName("a");
+    const a2 = a1.getElementsByTagName("a");
+    const texto = a2.textContent.toLowerCase();
 
-    if (text.includes(filter)) {
+    if (texto.includes(filter)) {
       items[i].style.display = 'block';
     } else {
       items[i].style.display = 'none';
@@ -194,7 +197,7 @@ input.addEventListener('keyup', function() {
 		<ul class="listaJuegos" id="my-list">
 		<li class="Juego"><a href="PepeCraft/pepecraft"><img src="Juegos/pepecraft.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">PepeCraft</a></a></li>
 		<li class="Juego"><a href="MicroBugiado/html"><img src="Juegos/microBugueado.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Micro Bugueado</a></a></li>
-		<li class="Juego"><a href="Filtros/"><img src="Juegos/filtros.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Filtros Chafas</a></a>filtros chafas</li>
+		<li class="Juego"><a href="Filtros/"><img src="Juegos/filtros.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Filtros Chafas</a></a></li>
 		<li class="Juego"><a href="AdivinaElDibujo/"><img src="Juegos/dibujo.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Adivinar el dibujo de google apis</a></a></li>
 		<li class="Juego"><a href="BoxJump/"><img src="Juegos/BoxJump.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">BoxJump</a></a></li>
 		<li class="Juego"><a href="dino"><img src="Juegos/dino.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">dino</a></a></li>
