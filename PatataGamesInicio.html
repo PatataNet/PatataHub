@@ -138,6 +138,19 @@ h2:after {
 .juego:hover {
   transform: scale(0.95);
 }
+	
+.buscar {
+  background-color: #CDCED4;
+  border-radius: 5px;
+  border: 1px solid #3B5271;
+	outline: none;
+	cursor: pointer;
+	transition: border 0.3s ease-in-out;
+}
+	
+.buscar:focus {
+	  border: 1px solid blue;
+}
 		</style>
 </head>
 
@@ -181,7 +194,7 @@ h2:after {
                 <ul class="navbar-nav ml-auto scrollspy"> 
                     <li class="nav-item"><a href="inicio" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">Regresar</a></li>
 		    <li class="nav-item"><a href="PatataGamesPC" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">PC</a></li>
-		    <li class="nav-item"><input type="text" id="search-input" placeholder="Buscar..."> <button onclick="buscar()">Buscar</button></li>
+		    <li class="nav-item"><input type="text" id="search-input" placeholder="Buscar juegos" class="buscar"></li>
                 </ul>
             </div>
         </nav>
