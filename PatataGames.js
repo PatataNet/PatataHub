@@ -2,7 +2,7 @@ const input = document.getElementById('search-input');
 const list = document.getElementById('my-list');
 const items = list.getElementsByTagName('li');
 
-buscar() {
+function buscar() {
   const filter = input.value.toLowerCase();
 
   for (let i = 0; i < items.length; i++) {
