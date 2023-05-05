@@ -143,7 +143,30 @@ h2:after {
 
 <body data-gr-c-s-loaded="true" class="" style="">
 	
-	<script src="https://patatanet.github.io/PatataHub/PatataGames.js"></script>
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('search-input');
+  const list = document.getElementById('my-list');
+  const items = list.getElementsByClassName('juego');
+
+  function buscar() {
+    const filter = input.value.toLowerCase();
+
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].querySelector('#textoxd');
+      const texto = text.textContent.toLowerCase();
+
+      if (texto.includes(filter)) {
+        items[i].style.display = 'block';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
+  }
+
+  input.addEventListener('input', buscar);
+});
+	</script>
 <!-- Encabezado de escritorio -->
 <header class="desktop-header-3 fixed-top" style="height: 80px;">
 
