@@ -154,8 +154,7 @@ buscar() {
 
   for (let i = 0; i < items.length; i++) {
     const text = items[i];
-    const a1 = text.getElementsByTagName("a");
-    const a2 = a1.getElementsByTagName("a");
+    const a2 = text.getElementsById('textoxd');
     const texto = a2.textContent.toLowerCase();
 
     if (texto.includes(filter)) {
@@ -180,7 +179,7 @@ buscar() {
                 <ul class="navbar-nav ml-auto scrollspy"> 
                     <li class="nav-item"><a href="inicio" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">Regresar</a></li>
 		    <li class="nav-item"><a href="PatataGamesPC" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">PC</a></li>
-		    <li class="nav-item"><input type="text" id="search-input" placeholder="Buscar (beta, no sirve)"></li>
+		    <li class="nav-item"><input type="text" id="search-input" placeholder="Buscar (beta, no sirve)"><button onclick="buscar()">Buscar</button></li>
                 </ul>
             </div>
         </nav>
@@ -195,42 +194,42 @@ buscar() {
 	<div class="wrapper">  
 		<br><br><br><br>
 		<ul class="listaJuegos" id="my-list">
-		<li class="Juego"><a href="PepeCraft/pepecraft"><img src="Juegos/pepecraft.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">PepeCraft</a></a></li>
-		<li class="Juego"><a href="MicroBugiado/html"><img src="Juegos/microBugueado.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Micro Bugueado</a></a></li>
-		<li class="Juego"><a href="Filtros/"><img src="Juegos/filtros.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Filtros Chafas</a></a></li>
-		<li class="Juego"><a href="AdivinaElDibujo/"><img src="Juegos/dibujo.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Adivinar el dibujo de google apis</a></a></li>
-		<li class="Juego"><a href="BoxJump/"><img src="Juegos/BoxJump.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">BoxJump</a></a></li>
-		<li class="Juego"><a href="dino"><img src="Juegos/dino.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">dino</a></a></li>
-		<li class="Juego"><a href="Pong/"><img src="Juegos/pong.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Pong</a></a></li>
-		<li class="Juego"><a href="Pong Circular/"><img src="Juegos/Pong Circular.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Pong Circular</a></a></li>
-		<li class="Juego"><a href="Moto X3M/"><img src="Juegos/motox3m.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Moto X3M Chafa</a></a></li>
-		<li class="Juego"><a href="Space Asteroid/"><img src="Juegos/spaceAsteroid.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Space Asteroid</a></a></li>
-		<li class="Juego"><a href="Tappy Plane/"><img src="Juegos/tappyPlane.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Tappy Plane</a></a></li>
-		<li class="Juego"><a href="Plinko/"><img src="Juegos/plinko.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Plinko</a></a></li>
-		<li class="Juego"><a href="Bolita Hook/"><img src="Juegos/bolitaHook.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Bolita Hook</a></a></li>
-		<li class="Juego"><a href="Coin Rush/"><img src="Juegos/coinRush.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Coin Rush</a></a></li>
-		<li class="Juego"><a href="Marcianito Adventures/"><img src="Juegos/marcianitoAdventures.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Marcianito Adventures</a></a></li>
-		<li class="Juego"><a href="PatoRun/"><img src="Juegos/patoRun.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Pato Run</a></a></li>
-		<li class="Juego"><a href="Gansito City/"><img src="Juegos/GansitoCity.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Gansito City</a></a></li>
-		<li class="Juego"><a href="El Dinosaurio Insano/"><img src="Juegos/DinosaurioInsano.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF; font-size: 18px;">Las Flipantes Aventuras de Julian, El Dinosaurio Insano</a></a></li>
-		<li class="Juego"><a href="Spherez/"><img src="Juegos/SPHEREZ.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">SPHEREZ</a></a></li>
-		<li class="Juego"><a href="El Gato/"><img src="Juegos/El Gato.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">El Gato / 3 en raya</a></a></li>
-		<li class="Juego"><a href="Sort It/"><img src="Juegos/Sort It.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Sort It</a></a></li>
-		<li class="Juego"><a href="Solitario/"><img src="Juegos/Solitario.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Solitario</a></a></li>
-		<li class="Juego"><a href="Buscaminas/"><img src="Juegos/Buscaminas.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Buscaminas</a></a></li>
-		<li class="Juego"><a href="New Earth/"><img src="Juegos/New Earth.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">New Earth</a></a></li>
-		<li class="Juego"><a href="Breakout/"><img src="Juegos/Breakout.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Breakout</a></a></li>
-		<li class="Juego"><a href="Simulador de Caminar/"><img src="Juegos/Simulador de Caminar.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Simulador de Caminar</a></a></li>
-		<li class="Juego"><a href="Triangulo VS Cubo/"><img src="Juegos/Triangulo VS Cubo.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF; font-size: 18px;">Triangulo VS Cubo:<br>  El juego mas pedorro</a></a></li>
-		<li class="Juego"><a href="Mach 3/"><img src="Juegos/Match 3.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Mach 3</a></a></li>
-		<li class="Juego"><a href="Awita refrescante/"><img src="Juegos/Awita Refrescante.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Awita Refrescante</a></a></li>
-		<li class="Juego"><a href="Ganso/"><img src="Juegos/Ganso.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Ganso.</a></a></li>
-		<li class="Juego"><a href="https://patatanet.github.io/MomosEscape/"><img src="Juegos/Momos Escape.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Momos Escape</a></a></li>
-		<li class="Juego"><a href="https://patatanet.github.io/Delivery/"><img src="Juegos/Delivery.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Delivery</a></a></li>
-		<li class="Juego"><a href="https://patatanet.github.io/LasAventurasDeJuanito/"><img src="Juegos/JuanitoAdventures.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Las Aventuras de Juanito</a></a></li>
-		<li class="Juego"><a href="https://patatanet.github.io/FlyingPlane/"><img src="Juegos/flying plane.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Flying Plane</a></a></li>
-		<li class="Juego"><a href="https://arcade.makecode.com/---multiplayer?host=30122-07814-54469-75245"><img src="Juegos/BombaDeCheetos.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Bomba de Cheetos</a></a></li>
-		<li class="Juego"><a href="https://patatanet.github.io/TappyPlane8BIT/"><img src="Juegos/TappyPlane8Bit.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;">Tappy Plane<br> (8BIT)</a></a></li>
+		<li class="Juego"><a href="PepeCraft/pepecraft"><img src="Juegos/pepecraft.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">PepeCraft</a></a></li>
+		<li class="Juego"><a href="MicroBugiado/html"><img src="Juegos/microBugueado.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Micro Bugueado</a></a></li>
+		<li class="Juego"><a href="Filtros/"><img src="Juegos/filtros.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Filtros Chafas</a></a></li>
+		<li class="Juego"><a href="AdivinaElDibujo/"><img src="Juegos/dibujo.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Adivinar el dibujo de google apis</a></a></li>
+		<li class="Juego"><a href="BoxJump/"><img src="Juegos/BoxJump.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">BoxJump</a></a></li>
+		<li class="Juego"><a href="dino"><img src="Juegos/dino.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">dino</a></a></li>
+		<li class="Juego"><a href="Pong/"><img src="Juegos/pong.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Pong</a></a></li>
+		<li class="Juego"><a href="Pong Circular/"><img src="Juegos/Pong Circular.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Pong Circular</a></a></li>
+		<li class="Juego"><a href="Moto X3M/"><img src="Juegos/motox3m.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Moto X3M Chafa</a></a></li>
+		<li class="Juego"><a href="Space Asteroid/"><img src="Juegos/spaceAsteroid.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Space Asteroid</a></a></li>
+		<li class="Juego"><a href="Tappy Plane/"><img src="Juegos/tappyPlane.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Tappy Plane</a></a></li>
+		<li class="Juego"><a href="Plinko/"><img src="Juegos/plinko.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Plinko</a></a></li>
+		<li class="Juego"><a href="Bolita Hook/"><img src="Juegos/bolitaHook.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Bolita Hook</a></a></li>
+		<li class="Juego"><a href="Coin Rush/"><img src="Juegos/coinRush.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Coin Rush</a></a></li>
+		<li class="Juego"><a href="Marcianito Adventures/"><img src="Juegos/marcianitoAdventures.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Marcianito Adventures</a></a></li>
+		<li class="Juego"><a href="PatoRun/"><img src="Juegos/patoRun.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Pato Run</a></a></li>
+		<li class="Juego"><a href="Gansito City/"><img src="Juegos/GansitoCity.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Gansito City</a></a></li>
+		<li class="Juego"><a href="El Dinosaurio Insano/"><img src="Juegos/DinosaurioInsano.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF; font-size: 18px;" id="textoxd">Las Flipantes Aventuras de Julian, El Dinosaurio Insano</a></a></li>
+		<li class="Juego"><a href="Spherez/"><img src="Juegos/SPHEREZ.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">SPHEREZ</a></a></li>
+		<li class="Juego"><a href="El Gato/"><img src="Juegos/El Gato.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">El Gato / 3 en raya</a></a></li>
+		<li class="Juego"><a href="Sort It/"><img src="Juegos/Sort It.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Sort It</a></a></li>
+		<li class="Juego"><a href="Solitario/"><img src="Juegos/Solitario.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Solitario</a></a></li>
+		<li class="Juego"><a href="Buscaminas/"><img src="Juegos/Buscaminas.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Buscaminas</a></a></li>
+		<li class="Juego"><a href="New Earth/"><img src="Juegos/New Earth.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">New Earth</a></a></li>
+		<li class="Juego"><a href="Breakout/"><img src="Juegos/Breakout.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Breakout</a></a></li>
+		<li class="Juego"><a href="Simulador de Caminar/"><img src="Juegos/Simulador de Caminar.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Simulador de Caminar</a></a></li>
+		<li class="Juego"><a href="Triangulo VS Cubo/"><img src="Juegos/Triangulo VS Cubo.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF; font-size: 18px;" id="textoxd">Triangulo VS Cubo:<br>  El juego mas pedorro</a></a></li>
+		<li class="Juego"><a href="Mach 3/"><img src="Juegos/Match 3.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Mach 3</a></a></li>
+		<li class="Juego"><a href="Awita refrescante/"><img src="Juegos/Awita Refrescante.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Awita Refrescante</a></a></li>
+		<li class="Juego"><a href="Ganso/"><img src="Juegos/Ganso.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Ganso.</a></a></li>
+		<li class="Juego"><a href="https://patatanet.github.io/MomosEscape/"><img src="Juegos/Momos Escape.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Momos Escape</a></a></li>
+		<li class="Juego"><a href="https://patatanet.github.io/Delivery/"><img src="Juegos/Delivery.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Delivery</a></a></li>
+		<li class="Juego"><a href="https://patatanet.github.io/LasAventurasDeJuanito/"><img src="Juegos/JuanitoAdventures.png" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Las Aventuras de Juanito</a></a></li>
+		<li class="Juego"><a href="https://patatanet.github.io/FlyingPlane/"><img src="Juegos/flying plane.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Flying Plane</a></a></li>
+		<li class="Juego"><a href="https://arcade.makecode.com/---multiplayer?host=30122-07814-54469-75245"><img src="Juegos/BombaDeCheetos.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Bomba de Cheetos</a></a></li>
+		<li class="Juego"><a href="https://patatanet.github.io/TappyPlane8BIT/"><img src="Juegos/TappyPlane8Bit.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Tappy Plane<br> (8BIT)</a></a></li>
 		</ul>
 		<br><br><br><br>
 
