@@ -1,6 +1,6 @@
 const input = document.getElementById('search-input');
 const list = document.getElementById('my-list');
-const items = list.getElementsByTagName('li');
+const items = list.getElementsByClassName('juego');
 
 function buscar() {
   const filter = input.value.toLowerCase();
