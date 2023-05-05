@@ -16,4 +16,4 @@ function buscar() {
       items[i].style.display = 'none';
     }
   }
-});
+}
