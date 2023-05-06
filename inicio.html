@@ -58,27 +58,29 @@
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-  const input = document.getElementByClassName('apps-input');
-  const list = document.getElementById('my-list');
-  const items = list.getElementsByClassName('app');
+  const input = document.getElementById('search-input');
+  const searchForm = document.getElementById('search-form');
 
-  function buscar() {
+  function buscar(event) {
+    event.preventDefault();
     const filter = input.value.toLowerCase();
-
-    for (let i = 0; i < items.length; i++) {
-      const text = items[i].querySelector('h4');
-      const textoxd = text.querySelector('a');
-      const texto = textoxd.textContent.toLowerCase();
-
-      if (texto.includes(filter)) {
-        items[i].style.display = 'block';
+    const searchResults = document.querySelectorAll('.gsc-webResult.gsc-result');
+    
+    for (let i = 0; i < searchResults.length; i++) {
+      const title = searchResults[i].querySelector('.gs-title');
+      const text = searchResults[i].querySelector('.gs-snippet');
+      const titleText = title.textContent.toLowerCase();
+      const bodyText = text.textContent.toLowerCase();
+      
+      if (titleText.includes(filter) || bodyText.includes(filter)) {
+        searchResults[i].style.display = 'block';
       } else {
-        items[i].style.display = 'none';
+        searchResults[i].style.display = 'none';
       }
     }
   }
 
-  input.addEventListener('input', buscar);
+  searchForm.addEventListener('submit', buscar);
 });
 	</script>
 <div class="flex text-gray-800 min-h-screen">
@@ -160,7 +162,13 @@
           </a>
         </div>
         <div class="h-64 bg-white border rounded-lg shadow-md py-4 px-6">
-		<input type="text" id="search-input" placeholder="Buscar..." class="apps-input">
+		<div class="gsc-input-box" id="gsc-iw-id1">
+  <form id="search-form">
+    <input id="search-input" type="text" autocomplete="off" name="search" placeholder="Buscar apps">
+    <button type="submit">Buscar</button>
+  </form>
+</div>
+
 		<br>
 		<ul id="my-list">
 			<li class="app"><h4 class="my-0 title"><a href="PatataGamesInicio">PatataGames</a></h4></li>
