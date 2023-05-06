@@ -66,8 +66,9 @@
     const filter = input.value.toLowerCase();
 
     for (let i = 0; i < items.length; i++) {
-      const text = items[i].querySelector('#textoxd');
-      const texto = text.textContent.toLowerCase();
+      const text = items[i].querySelector('h4');
+      const textoxd = text.querySelector('a');
+      const texto = textoxd.textContent.toLowerCase();
 
       if (texto.includes(filter)) {
         items[i].style.display = 'block';
