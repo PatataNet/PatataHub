@@ -43,7 +43,7 @@
 	
 }
 
-.apps-imput {
+.apps-input {
 	background-color: #CDCED4;
   border-radius: 5px;
   border: 1px solid #3B5271;
@@ -52,35 +52,32 @@
 	transition: border 0.3s ease-in-out;
 }
 	
-.apps-imput:hover {
+.apps-input:hover {
 	border: 1px solid blue;
 }
 </style>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-  const input = document.getElementById('search-input');
-  const searchForm = document.getElementById('search-form');
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementByClassName('apps-input');
+  const list = document.getElementById('my-list');
+  const items = list.getElementsByClassName('app');
 
-  function buscar(event) {
-    event.preventDefault();
+  function buscar() {
     const filter = input.value.toLowerCase();
-    const searchResults = document.querySelectorAll('.gsc-webResult.gsc-result');
-    
-    for (let i = 0; i < searchResults.length; i++) {
-      const title = searchResults[i].querySelector('.gs-title');
-      const text = searchResults[i].querySelector('.gs-snippet');
-      const titleText = title.textContent.toLowerCase();
-      const bodyText = text.textContent.toLowerCase();
-      
-      if (titleText.includes(filter) || bodyText.includes(filter)) {
-        searchResults[i].style.display = 'block';
+
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].querySelector('h4').querrySelector('a');
+      const texto = text.textContent.toLowerCase();
+
+      if (texto.includes(filter)) {
+        items[i].style.display = 'block';
       } else {
-        searchResults[i].style.display = 'none';
+        items[i].style.display = 'none';
       }
     }
   }
 
-  searchForm.addEventListener('submit', buscar);
+  input.addEventListener('input', buscar);
 });
 	</script>
 <div class="flex text-gray-800 min-h-screen">
@@ -164,8 +161,7 @@
         <div class="h-64 bg-white border rounded-lg shadow-md py-4 px-6">
 		<div class="gsc-input-box" id="gsc-iw-id1">
   <form id="search-form">
-    <input id="search-input" type="text" autocomplete="off" name="search" placeholder="Buscar apps">
-    <button type="submit">Buscar</button>
+    <input id="search-input" type="text" autocomplete="off" name="search" placeholder="Buscar apps" class="apps-input">
   </form>
 </div>
 
