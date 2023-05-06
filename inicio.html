@@ -34,6 +34,30 @@
   }
 }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('search-input');
+  const list = document.getElementById('my-list');
+  const items = list.getElementsByClassName('app');
+
+  function buscar() {
+    const filter = input.value.toLowerCase();
+
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].querySelector('#textoxd');
+      const texto = text.textContent.toLowerCase();
+
+      if (texto.includes(filter)) {
+        items[i].style.display = 'block';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
+  }
+
+  input.addEventListener('input', buscar);
+});
+	</script>
 <div class="flex text-gray-800 min-h-screen">
   <aside class="hidden md:block bg-white px-6 py-5 h-full w-full sm:relative sm:w-64 lg:w-1/5">
     <a href="#" class="flex min-w-max-content items-center font-bold text-lg p-2 mb-12">
@@ -113,27 +137,15 @@
           </a>
         </div>
         <div class="h-64 bg-white border rounded-lg shadow-md py-4 px-6">
-    <h4 class="my-0 title">
-                    <a href="PatataGamesInicio">PatataGames</a>
-                </h4>
-		<h4 class="my-0 title">
-                    <a href="InicioPatataPedia">PatataPedia</a>
-                </h4>
-            <br>
-		<h4 class="my-0 title">
-                    <a href="PaintChafita/">Paint Chafa</a>
-                </h4>
-    </h4>
-		<h4 class="my-0 title">
-                    <a href="Paint Chafa 2/">Paint Chafa 2</a>
-                </h4>
-            <br>
-		<h4 class="my-0 title">
-                    <a href="Patatatexto/">Editor de texto</a>
-                </h4>
-		<h4 class="my-0 title">
-                    <a href="Noticias">Noticias</a>
-                </h4>
+		<input type="text" id="search-input" placeholder="Buscar..." class="apps-input">
+		<ul id="my-list">
+			<li class="app"><h4 class="my-0 title"><a href="PatataGamesInicio">PatataGames</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="InicioPatataPedia">PatataPedia</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="PatataTexto">PatataTexto</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="Noticias">Noticias</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="PaintChafita/">Paint Chafa</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="Paint Chafa 2/">Paint Chafa 2</a></h4></li>
+		</ul>
 		
 			<br><br><br><br><br><br>
         </div>
