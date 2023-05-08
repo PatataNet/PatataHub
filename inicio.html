@@ -46,10 +46,11 @@
 .apps-input {
 	background-color: #F2F2F2;
   	border-radius: 5px;
-  	border: 1px solid #DDDDDD;
+  	border: 2px solid #DDDDDD;
 	outline: none;
 	cursor: pointer;
-	transition: border 0.3s ease-in-out;
+	transition: border 0.3s ease-in;
+	padding: 8px;
 }
 	
 .apps-input:hover {
@@ -160,9 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="h-64 bg-white border rounded-lg shadow-md py-4 px-6">
 		<div class="gsc-input-box" id="gsc-iw-id1">
-  <form id="search-form">
     <input id="search-input" type="text" autocomplete="off" name="search" placeholder="Buscar apps" class="apps-input">
-  </form>
 </div>
 
 		<br>
