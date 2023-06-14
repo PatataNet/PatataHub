@@ -1,6 +1,7 @@
 <link rel="icon" type="image/png" href="me.png">
 	<title>PatataHub|Inicio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="utf-8">
 
 	<!-- HOJAS DE ESTILO -->
 
@@ -14,6 +15,25 @@
 	<link rel="stylesheet" href="style/style.css" type="text/css" media="all">
 <link rel="stylesheet" href="https://www.unpkg.com/tailwindcss@1.8.10/dist/tailwind-experimental.min.css" type="text/css" media="all">
 <style>
+	
+footer {
+        background-color: #E6EBF1;
+        border-top: 3px solid #CAD5E3;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+}
+.footer-section {
+        margin-bottom: 10px;
+}
+.ElementoFooter {
+        color: #2B2C2E;
+}
+.TitulosFooter {
+        color: #0E1013;
+}	
 	
 #my-list li.show {
   display: block;
@@ -178,5 +198,27 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </section>
     </main>
+<footer>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Principal</h3>
+        <ul>
+          <li><a href="https://patatanet.github.io/PatataHub/inicio#gsc.tab=0" class="ElementoFooter">Inicio</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/InicioPatataPedia" class="ElementoFooter">PatataPedia</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/Novedades" class="ElementoFooter">Novedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Ocio</h3>
+        <ul>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataGamesInicio" class="ElementoFooter">PatataGames</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataGamesPC" class="ElementoFooter">Juegos de PC</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataHack" class="ElementoFooter">PatataHacks</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Contacto</h3>
+        <p class="ElementoFooter">Email: contactopatatahub@gmail.com</p>
+      </div>
+    </footer>
   </div>
 </div>
