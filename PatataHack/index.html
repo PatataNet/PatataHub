@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Carrusel</title>
+    <style>
+      .carousel-container {
+        width: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      
+      .carousel-slide {
+        width: 100%;
+      }
+      
+      .carousel-slide-content {
+        text-align: center;
+        padding: 20px;
+        background-color: #f2f2f2;
+      }
+      
+      .carousel-slide-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .carousel-slide-description {
+        margin-bottom: 20px;
+      }
+      
+      .carousel-slide-button {
+        padding: 10px 20px;
+        background-color: #3B5271;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-slide">
+          <div class="carousel-slide-content">
+            <h2 class="carousel-slide-title">Elemento 1</h2>
+            <p class="carousel-slide-description">Descripción del elemento 1</p>
+            <a href="archivo1.bat" class="carousel-slide-button" download>Descargar Archivo 1</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="carousel-slide-content">
+            <h2 class="carousel-slide-title">Elemento 2</h2>
+            <p class="carousel-slide-description">Descripción del elemento 2</p>
+            <a href="archivo2.bat" class="carousel-slide-button" download>Descargar Archivo 2</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div class="carousel-slide-content">
+            <h2 class="carousel-slide-title">Elemento 3</h2>
+            <p class="carousel-slide-description">Descripción del elemento 3</p>
+            <a href="archivo3.bat" class="carousel-slide-button" download>Descargar Archivo 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      const carousel = document.querySelector('.carousel');
+      const slides = document.querySelectorAll('.carousel-slide');
+      
+      let counter = 1;
+      const slideWidth = slides[0].clientWidth;
+      
+      carousel.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
+      
+      setInterval(() => {
+        carousel.style.transition = 'transform 0.5s ease-in-out';
+        counter++;
+        carousel.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
+      }, 3000);
+      
+      carousel.addEventListener('transitionend', () => {
+        if (slides[counter].classList.contains('carousel-slide')) {
+          carousel.style.transition = 'none';
+          counter = 1;
+          carousel.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
+        }
+      });
+    </script>
+  </body>
+</html>
