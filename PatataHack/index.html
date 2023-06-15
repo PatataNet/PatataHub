@@ -4,37 +4,31 @@
     <meta charset="utf-8">
     <title>PatataHacks</title>
     <style>
-      .carousel-container {
-        width: 500px;
+      .grid-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        max-width: 800px;
         margin: 0 auto;
-        overflow: hidden;
       }
       
-      .carousel {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-      
-      .carousel-slide {
-        width: 100%;
-      }
-      
-      .carousel-slide-content {
-        text-align: center;
-        padding: 20px;
+      .grid-menu-item {
         background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
       }
       
-      .carousel-slide-title {
+      .grid-menu-title {
         font-size: 24px;
         margin-bottom: 10px;
       }
       
-      .carousel-slide-description {
+      .grid-menu-description {
         margin-bottom: 20px;
       }
       
-      .carousel-slide-button {
+      .grid-menu-button {
         padding: 10px 20px;
         background-color: #3B5271;
         color: #fff;
@@ -44,54 +38,22 @@
     </style>
   </head>
   <body>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="carousel-slide">
-          <div class="carousel-slide-content">
-            <h2 class="carousel-slide-title">Parrot</h2>
-            <p class="carousel-slide-description">Es un lorito bailando en la terminal de windows ("curl parrot.live" para los que quieran saber el comando).</p>
-            <a href="Parrot.bat" class="carousel-slide-button" download>Descargar</a>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="carousel-slide-content">
-            <h2 class="carousel-slide-title">ParrotInfinito</h2>
-            <p class="carousel-slide-description">Es como el parrot pero infinito (no lo abran por error, yo mientras hacia esto lo abri por accidente y tuve que reiniciar la pc).</p>
-            <a href="ParrotInfinito.bat" class="carousel-slide-button" download>Descargar</a>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="carousel-slide-content">
-            <h2 class="carousel-slide-title">Modo Hacker</h2>
-            <p class="carousel-slide-description">Se llama modo hacker pq cuando lo abres parece que hackeas la nasa en una pelicula gringa (no hackea nada pero sirve para bromas xd).</p>
-            <a href="ModoHacker (Broma).bat" class="carousel-slide-button" download>Descargar</a>
-          </div>
-        </div>
+    <div class="grid-menu">
+      <div class="grid-menu-item">
+        <h2 class="grid-menu-title">Parrot</h2>
+        <p class="grid-menu-description">Es un lorito bailando en la terminal de windows ("curl parrot.live" para los que quieran saber el comando).</p>
+        <a href="Parrot.bat" class="grid-menu-button" download>Descargar Archivo</a>
       </div>
-    </div>
-    
-    <script>
-      const carousel = document.querySelector('.carousel');
-      const slides = document.querySelectorAll('.carousel-slide');
-      
-      let counter = 1;
-      const slideWidth = slides[0].clientWidth;
-      
-      carousel.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
-      
-      setInterval(() => {
-        carousel.style.transition = 'transform 0.5s ease-in-out';
-        counter++;
-        carousel.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
-      }, 3000);
-      
-      carousel.addEventListener('transitionend', () => {
-        if (slides[counter].classList.contains('carousel-slide')) {
-          carousel.style.transition = 'none';
-          counter = 1;
-          carousel.style.transform = 'translateX(' + (-slideWidth * counter) + 'px)';
-        }
-      });
-    </script>
+      <div class="grid-menu-item">
+        <h2 class="grid-menu-title">Parrot Infinito</h2>
+        <p class="grid-menu-description">Es como el parrot pero infinito (no lo abran por error, yo mientras hacia esto lo abri por accidente y tuve que reiniciar la pc).</p>
+        <a href="ParrotInfinito.bat" class="grid-menu-button" download>Descargar Archivo</a>
+      </div>
+      <div class="grid-menu-item">
+        <h2 class="grid-menu-title">Modo Hacker</h2>
+        <p class="grid-menu-description">Se llama modo hacker pq cuando lo abres parece que hackeas la nasa en una pelicula gringa (no hackea nada pero sirve para bromas xd).</p>
+        <a href="ModoHacker (Broma).bat" class="grid-menu-button" download>Descargar Archivo</a>
+      </div>
+    </div> 
   </body>
 </html>
