@@ -1,0 +1,294 @@
+<html><head>
+	<link rel="icon" type="image/png" href="patatagameslogo.png">
+	<title>Es H: El Juego - PatataHub</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="style/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="style/all.min.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="style/slick.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="style/animate.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="style/style.css" type="text/css" media="all">
+
+	<!-- HOJAS DE ESTILO -->
+    
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+
+footer {
+        background-color: #313152;
+        border-top: 3px solid #3A3A6D;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+}
+.footer-section {
+        margin-bottom: 10px;
+}
+.ElementoFooter {
+        color: #A3A3D9;
+}
+.TitulosFooter {
+        color: #CACAE8;
+}	
+	
+::-webkit-scrollbar {
+    display: none;
+	}	
+
+#my-list li.show {
+  display: block;
+}
+	
+.abs {
+  position: absolute;
+}
+.rel,
+h2 {
+  position: relative;
+}
+.fix {
+  position: fixed;
+}
+.dfix {
+  display: inline;
+}
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.dn {
+  display: none;
+}
+.df {
+  display: flex;
+}
+.dif {
+  display: inline-flex;
+}
+.dg {
+  display: grid;
+}
+.dig {
+  display: inline-grid;
+}
+.vm,
+h2,
+h2 strong,
+h2 span {
+  vertical-align: middle;
+}
+body {
+  background: #24282f;
+  font-family: 'Alegreya Sans';
+}
+.wrapper {
+  padding: 15px;
+}
+h2 {
+  padding: 10px;
+  padding-left: 25px;
+  color: #ccc;
+  margin: 0;
+}
+h2 strong {
+  z-index: 2;
+  background: #24282f;
+  padding: 4px 8px;
+  opacity: 0;
+}
+h2 span {
+  font-size: 0.8em;
+  color: #aaa;
+  margin-left: 10px;
+}
+h2:after {
+  content: '';
+  z-index: 1;
+  bottom: 50%;
+  margin-bottom: -2px;
+  height: 2px;
+  left: 0;
+  right: 0;
+  background: #373d47;
+}
+
+.PatataGames {
+  font-size: 50px;
+}
+.Plataforma {
+  font-size: 35px;
+}
+
+.listaJuegos {
+  list-style-type: none;
+}
+
+.juego {
+  float: left;
+  background-color: #363636;
+  margin-right: 10px;
+  border: #D7C8B6 2px solid;
+  width: 157px;
+  height: 235.5px;
+}
+
+.texto {
+  font-family: 'Dongle', sans-serif;
+  opacity: 0;
+  font-size: 25px;
+  z-index: 10000;
+  color: #FFFFFF;
+  position: relative;
+  top: -83px;
+  left: 5%;
+}
+	
+.juego:hover > .texto {
+   opacity: 1;
+}
+.juego:hover {
+  transform: scale(0.95);
+}
+	
+.buscar {
+  background-color: #CDCED4;
+  border-radius: 5px;
+  border: 1px solid #3B5271;
+	outline: none;
+	cursor: pointer;
+	transition: border 0.3s ease-in-out;
+}
+	
+.buscar:hover {
+	  border: 1px solid blue;
+}
+		</style>
+</head>
+
+<body data-gr-c-s-loaded="true" class="" style="">
+	
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('search-input');
+  const list = document.getElementById('my-list');
+  const items = list.getElementsByClassName('juego');
+
+  function buscar() {
+    const filter = input.value.toLowerCase();
+
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].querySelector('#textoxd');
+      const texto = text.textContent.toLowerCase();
+
+      if (texto.includes(filter)) {
+        items[i].style.display = 'block';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
+  }
+
+  input.addEventListener('input', buscar);
+});
+	</script>
+<!-- Encabezado de escritorio -->
+<header class="desktop-header-3 fixed-top" style="height: 80px;">
+
+    <div class="container">
+	
+        <nav class="navbar navbar-expand-lg navbar-dark">
+           
+            <b class="navbar-brand" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">PatataGames (36)</b> 
+
+            <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto scrollspy"> 
+                    <li class="nav-item"><a href="inicio" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">Inicio</a></li>
+		    <li class="nav-item"><a href="PatataGames" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">Regresar</a></li>
+                  <li class="nav-item"><a href="PatataGamesPC" class="nav-link" style="font-family: 'Dongle', sans-serif; font-size: 30px; position: relative; top: -15px;">PC</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+</header>
+
+<footer>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Principal</h3>
+        <ul>
+          <li><a href="https://patatanet.github.io/PatataHub/inicio#gsc.tab=0" class="ElementoFooter">Inicio</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/InicioPatataPedia" class="ElementoFooter">PatataPedia</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/Novedades" class="ElementoFooter">Novedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Ocio</h3>
+        <ul>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataGamesInicio" class="ElementoFooter">PatataGames</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataGamesPC" class="ElementoFooter">Juegos en app</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataHack/" class="ElementoFooter">PatataHacks</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Contacto</h3>
+        <p class="ElementoFooter">Email: contactopatatahub@gmail.com</p>
+      </div>
+    </footer>
+	
+<!-- Esquema de disposición principal -->
+<main class="content-3">
+<br><br><br><br>
+	<div class="wrapper">  
+		<br><br><br><br>
+		<ul class="listaJuegos" id="my-list">
+		<li class="Juego"><a href="EsHAndroid/EsHMobile.apk"><img src="Juegos/EsH.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Es H: Mobile</a></a></li>
+		<li class="Juego"><a href="https://vato123.itch.io/es-h"><img src="Juegos/EsH.jpg" width="157" height="157"><a class="texto" style="color:#FFFFFF;" id="textoxd">Es H: El Juego (PC)</a></a></li>
+		</ul>
+		<br><br><br><br>
+
+</div>
+	
+</main>
+	
+<!-- Botón para ir a la parte superior -->
+<!-- Modal-->
+ <!-- Fin  del modal-->
+<!-- SCRIPTS -->
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/infinite-scroll.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/morphext.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+
+<script src="js/custom.js"></script>
+
+      
+
+
+
+
+
+
+
+</body></html>
