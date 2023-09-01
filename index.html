@@ -1,264 +1,224 @@
-<html>
-	<head>
-	<link rel="icon" type="image/png" href="me.png">
-	<title>PatataHub</title>
+<link rel="icon" type="image/png" href="me.png">
+	<title>PatataHub|Inicio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="utf-8">
 
 	<!-- HOJAS DE ESTILO -->
-		
-<style type="text/css">
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000;
-    overflow: hidden;
+
+	<link rel="stylesheet" href="style/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="style/all.min.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="style/slick.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="style/animate.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="style/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://www.unpkg.com/tailwindcss@1.8.10/dist/tailwind-experimental.min.css" type="text/css" media="all">
+<style>
+	
+footer {
+        background-color: #E6EBF1;
+        border-top: 3px solid #CAD5E3;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+}
+.footer-section {
+        margin-bottom: 10px;
+}
+.ElementoFooter {
+        color: #2B2C2E;
+}
+.TitulosFooter {
+        color: #0E1013;
+}	
+	
+#my-list li.show {
+  display: block;
+}
+	
+  ::-webkit-scrollbar {
+    display: none;
+	}
+  
+  h3764 {
+  -webkit-animation: shift-hue 20s infinite linear;
+  animation: shift-hue 20s infinite linear;
 }
 
-
-
-.wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .wrapper {
-    color: white;
-    font-weight: 800;
-    position: relative;
-    font-size: 100px;
-    padding: 30px; }
-  .wrapper a::before {
-    padding: 30px;
-    color: white;
-    content: "PatataHub";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: black;
-    overflow: hidden;
-    top: 0; }
-  .wrapper a::before {
-    left: 3px;
-    text-shadow: -2px 0 red;
-    animation-name: glitch-animation-1;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse-alternate; }
-  .wrapper a::after {
-    left: -3px;
-    text-shadow: -2px 0 blue;
-    animation-name: glitch-animation-2;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse-alternate; }
-
-@keyframes glitch-animation-1 {
+@keyframes shift-hue {
   0% {
-    clip: rect(55px, 350px, 77px, 30px); }
-  5% {
-    clip: rect(83px, 350px, 98px, 30px); }
-  10% {
-    clip: rect(102px, 350px, 44px, 30px); }
-  15% {
-    clip: rect(95px, 350px, 84px, 30px); }
-  20% {
-    clip: rect(95px, 350px, 69px, 30px); }
-  25% {
-    clip: rect(26px, 350px, 12px, 30px); }
-  30% {
-    clip: rect(61px, 350px, 68px, 30px); }
-  35% {
-    clip: rect(91px, 350px, 143px, 30px); }
-  40% {
-    clip: rect(143px, 350px, 129px, 30px); }
-  45% {
-    clip: rect(36px, 350px, 109px, 30px); }
-  50% {
-    clip: rect(121px, 350px, 12px, 30px); }
-  55% {
-    clip: rect(9px, 350px, 9px, 30px); }
-  60% {
-    clip: rect(123px, 350px, 62px, 30px); }
-  65% {
-    clip: rect(134px, 350px, 103px, 30px); }
-  70% {
-    clip: rect(82px, 350px, 23px, 30px); }
-  75% {
-    clip: rect(25px, 350px, 49px, 30px); }
-  80% {
-    clip: rect(42px, 350px, 10px, 30px); }
-  85% {
-    clip: rect(66px, 350px, 13px, 30px); }
-  90% {
-    clip: rect(34px, 350px, 89px, 30px); }
-  95% {
-    clip: rect(51px, 350px, 114px, 30px); }
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
   100% {
-    clip: rect(86px, 350px, 81px, 30px); } }
-
-@keyframes glitch-animation-2 {
-  0% {
-    clip: rect(108px, 350px, 20px, 30px); }
-  5% {
-    clip: rect(67px, 350px, 58px, 30px); }
-  10% {
-    clip: rect(144px, 350px, 90px, 30px); }
-  15% {
-    clip: rect(91px, 350px, 62px, 30px); }
-  20% {
-    clip: rect(20px, 350px, 114px, 30px); }
-  25% {
-    clip: rect(42px, 350px, 49px, 30px); }
-  30% {
-    clip: rect(134px, 350px, 148px, 30px); }
-  35% {
-    clip: rect(30px, 350px, 4px, 30px); }
-  40% {
-    clip: rect(114px, 350px, 74px, 30px); }
-  45% {
-    clip: rect(104px, 350px, 127px, 30px); }
-  50% {
-    clip: rect(49px, 350px, 24px, 30px); }
-  55% {
-    clip: rect(9px, 350px, 15px, 30px); }
-  60% {
-    clip: rect(133px, 350px, 134px, 30px); }
-  65% {
-    clip: rect(28px, 350px, 63px, 30px); }
-  70% {
-    clip: rect(116px, 350px, 52px, 30px); }
-  75% {
-    clip: rect(88px, 350px, 10px, 30px); }
-  80% {
-    clip: rect(78px, 350px, 25px, 30px); }
-  85% {
-    clip: rect(139px, 350px, 55px, 30px); }
-  90% {
-    clip: rect(14px, 350px, 136px, 30px); }
-  95% {
-    clip: rect(113px, 350px, 139px, 30px); }
-  100% {
-    clip: rect(18px, 350px, 1px, 30px); } }
-
-.text {
-    position: absolute;
-    top: 50%; 
-    right: 50%;
-    transform: translate(50%,-50%);
-    text-transform: uppercase;
-    font-family: verdana;
-    font-size: 12em;
-    font-weight: 700;
-    color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
+    -webkit-filter: hue-rotate(-360deg);
+    filter: hue-rotate(-360deg);
+  }
+}
+	
+.app {
+	
 }
 
-
-
-a span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
-            clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+.apps-input {
+	background-color: #F2F2F2;
+  	border-radius: 5px;
+  	border: 2px solid #DDDDDD;
+	outline: none;
+	cursor: pointer;
+	transition: border 0.3s ease-in;
+	padding: 8px;
 }
-
-a::before,
-a::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-a::before {
-    animation: crack1 2.5s linear forwards;
-    -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
-}
-
-a::after {
-    animation: crack2 2.5s linear forwards;
-    -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
-            clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
-}
-
-@keyframes shake {
-    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
-        filter: blur(0.018em);
-        transform: translateY(0.018em) rotate(0deg);
-    }
-
-    10%, 30%, 40%, 50%, 70%, 80%, 90% {
-        filter: blur(0.1em);
-        transform: translateY(-0.018em) rotate(0deg);
-    }
-
-    20%, 60% {
-        filter: blur(0.03em);
-        transform: translate(-0.018em, 0.018em) rotate(0deg);
-    }
-
-    45%, 85% {
-        filter: blur(0.05em);
-        transform: translate(0.018em, -0.018em) rotate(0deg);
-    }
-
-    100% {
-        filter: blur(0.007em);
-        transform: translate(0) rotate(-0.5deg);
-    }
-}
-
-@keyframes crack1 {
-    0%, 95% {
-        transform: translate(-50%, -50%);
-    }
-
-    100% {
-        transform: translate(-51%, -48%);
-    }
-}
-
-@keyframes crack2 {
-    0%, 95% {
-        transform: translate(-50%, -50%);
-    }
-
-    100% {
-        transform: translate(-49%, -53%);
-    }
+	
+.apps-input:hover {
+	border: 5px #939393;
 }
 </style>
-		
-</head>
-<body data-gr-c-s-loaded="true" class="" style="">
-  <main class="content-3">
-    
-<a data-text="PatataHub" class="text" href="https://patatanet.github.io/PatataHub/inicio#gsc.tab=0"><span>P@t4tAhU3</span></a>
-	  
-  </main>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('search-input');
+  const list = document.getElementById('my-list');
+  const items = list.getElementsByClassName('app');
 
-</body>
-</html>
+  function buscar() {
+    const filter = input.value.toLowerCase();
+
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].querySelector('#appxd');
+      const texto = text.textContent.toLowerCase();
+
+      if (texto.includes(filter)) {
+        items[i].style.display = 'block';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
+  }
+
+  input.addEventListener('input', buscar);
+});
+	</script>
+<div class="flex text-gray-800 min-h-screen">
+  <aside class="hidden md:block bg-white px-6 py-5 h-full w-full sm:relative sm:w-64 lg:w-1/5">
+    <a href="#" class="flex min-w-max-content items-center font-bold text-lg p-2 mb-12">
+      <img src="https://patatanet.github.io/PatataHub/me.png" width="50">
+      <img src="" width="10">
+      PatataHub
+    </a>
+    <nav class="text-gray-600 text-lg font-semibold min-w-max-content space-y-2">
+      <a href="#" class="flex items-center flex-shrink-0 px-5 py-3 rounded-full text-indigo-700 bg-indigo-100 bg-opacity-25">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="h-7 w-7 mr-2.5 flex-shrink-0">
+          <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+        </svg>
+        Inicio
+      </a>
+      <a href="https://patatanet.github.io/PatataHub/PatataGamesInicio" class="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0">
+  <path d="M15.4695 11.2929C15.0789 10.9024 14.4458 10.9024 14.0553 11.2929C13.6647 11.6834 13.6647 12.3166 14.0553 12.7071C14.4458 13.0976 15.0789 13.0976 15.4695 12.7071C15.86 12.3166 15.86 11.6834 15.4695 11.2929Z" fill="currentColor" />
+  <path d="M16.1766 9.17156C16.5671 8.78103 17.2003 8.78103 17.5908 9.17156C17.9813 9.56208 17.9813 10.1952 17.5908 10.5858C17.2003 10.9763 16.5671 10.9763 16.1766 10.5858C15.7861 10.1952 15.7861 9.56208 16.1766 9.17156Z" fill="currentColor" />
+  <path d="M19.7121 11.2929C19.3216 10.9024 18.6885 10.9024 18.2979 11.2929C17.9074 11.6834 17.9074 12.3166 18.2979 12.7071C18.6885 13.0976 19.3216 13.0976 19.7121 12.7071C20.1027 12.3166 20.1027 11.6834 19.7121 11.2929Z" fill="currentColor" />
+  <path d="M16.1766 13.4142C16.5671 13.0237 17.2003 13.0237 17.5908 13.4142C17.9813 13.8048 17.9813 14.4379 17.5908 14.8284C17.2003 15.219 16.5671 15.219 16.1766 14.8284C15.7861 14.4379 15.7861 13.8048 16.1766 13.4142Z" fill="currentColor" />
+  <path d="M6 13H4V11H6V9H8V11H10V13H8V15H6V13Z" fill="currentColor" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z" fill="currentColor" />
+</svg>
+        PatataGames
+      </a>
+      <a href="https://patatanet.github.io/PatataHub/InicioPatataPedia" class="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0">
+          <path
+    d="M8.01562 6.98193C7.46334 6.98193 7.01562 7.43285 7.01562 7.98513C7.01562 8.53742 7.46334 8.98833 8.01563 8.98833H15.9659C16.5182 8.98833 16.9659 8.53742 16.9659 7.98513C16.9659 7.43285 16.5182 6.98193 15.9659 6.98193H8.01562Z"
+    fill="currentColor"
+  />
+  <path
+    d="M7.01562 12C7.01562 11.4477 7.46334 10.9968 8.01562 10.9968H15.9659C16.5182 10.9968 16.9659 11.4477 16.9659 12C16.9659 12.5523 16.5182 13.0032 15.9659 13.0032H8.01563C7.46334 13.0032 7.01562 12.5523 7.01562 12Z"
+    fill="currentColor"
+  />
+  <path
+    d="M8.0249 15.0122C7.47262 15.0122 7.0249 15.4631 7.0249 16.0154C7.0249 16.5677 7.47262 17.0186 8.0249 17.0186H15.9752C16.5275 17.0186 16.9752 16.5677 16.9752 16.0154C16.9752 15.4631 16.5275 15.0122 15.9752 15.0122H8.0249Z"
+    fill="currentColor"
+  />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z"
+    fill="currentColor"
+  />
+</svg>
+        PatataPedia
+      </a>
+    </nav>
+  </aside>
+  <div class="flex-grow bg-gray-100">
+    <header style="background: #DFE1E5;">
+                   
+      <button class="block md:hidden p-2 text-gray-700 mr-2">
+        
+      </button>
+      <div class="relative w-full max-w-4xl mr-6 sm:mr-8 md:mr-16 lg:mr-24">
+                        <br>
+      </div>
+    </header>
+                                                                          <script async src="https://cse.google.com/cse.js?cx=526ac04dc81054da3">
+</script>
+<div class="gcse-search"></div>
+    <main class="flex flex-col space-y-10 px-6 py-5 max-w-6xl mx-auto">
+      <h1 class="text-3xl">
+        <span class="text-gray-500">Bienvenido a</span>
+        <span class="font-semibold"><h3764 class="relative z-10 text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-blue-600">PatataHub</h3764></span>    
+      </h1>
+      <section>
+        <div class="flex justify-between items-center mb-6">
+          <header class="text-xl font-semibold">Apps:</header>
+          <a href="https://patatanet.github.io/PatataHub/inicioAntiguo" class="hidden sm:flex flex-shrink-0 items-center text-lg font-medium text-gray-500">
+            Inicio antiguo
+            <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 ml-1 mt-1">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+        <div class="h-64 bg-white border rounded-lg shadow-md py-4 px-6">
+		<div class="gsc-input-box" id="gsc-iw-id1">
+    <input id="search-input" type="text" autocomplete="off" name="search" placeholder="Buscar apps" class="apps-input">
+</div>
+
+		<br>
+		<ul id="my-list">
+			<li class="app"><h4 class="my-0 title"><a href="PatataGamesInicio" id="appxd">PatataGames</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="InicioPatataPedia" id="appxd">PatataPedia</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="PatataTexto" id="appxd">PatataTexto</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="Noticias" id="appxd">Noticias</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="PaintChafita/" id="appxd">Paint Chafa</a></h4></li>
+			<li class="app"><h4 class="my-0 title"><a href="Paint Chafa 2/" id="appxd">Paint Chafa 2</a></h4></li>
+		</ul>
+		
+			<br><br><br><br><br><br>
+        </div>
+      </section>
+    </main>
+<footer>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Principal</h3>
+        <ul>
+          <li><a href="https://patatanet.github.io/PatataHub/inicio#gsc.tab=0" class="ElementoFooter">Inicio</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/InicioPatataPedia" class="ElementoFooter">PatataPedia</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/Novedades" class="ElementoFooter">Novedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Ocio</h3>
+        <ul>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataGamesInicio" class="ElementoFooter">PatataGames</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataGamesPC" class="ElementoFooter">Juegos Instalables</a></li>
+          <li><a href="https://patatanet.github.io/PatataHub/PatataHack/" class="ElementoFooter">PatataHacks</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="ElementoFooter TitulosFooter">Contacto</h3>
+        <p class="ElementoFooter">Email: contactopatatahub@gmail.com</p>
+      </div>
+    </footer>
+  </div>
+</div>
