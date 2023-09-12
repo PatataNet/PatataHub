@@ -1,0 +1,12 @@
+{
+  "name": "Carreras de carros chocones",
+  "short_name": "Carreras de carros chocones",
+  "id": "com.example.gamename",
+  "description": "An arcade racing game inspired from Out Run.\n\nAsset sources\n- Plants and cars are from Kenney\n- The montains are from pzUH",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
