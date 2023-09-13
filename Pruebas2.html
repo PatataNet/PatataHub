@@ -155,8 +155,19 @@ footer {
         }
 
         .hidden {
-            display: none;
+            font-family: 'Dongle', sans-serif;
+            opacity: 0;
+            font-size: 25px;
+            z-index: 10000;
+            color: #FFFFFF;
+            position: relative;
+            top: -83px;
+            left: 5%;
         }
+
+        .interactive-image:hover > .hidden {
+            opacity: 1;
+}
     </style>
 <script>
   // Obtener elementos del DOM
@@ -305,8 +316,8 @@ window.addEventListener('click', function (e) {
         <div class="h-128 w-128 bg-white border rounded-lg shadow-md py-4 px-6">
         <ul class="my-list">
           <li>
-            <img id="a1" class="interactive-image" src="JuegosA/pepecraft.jpg" onmouseover="toggleImage('a1', 'b1')" onmouseout="toggleImage('a1', 'a1')" onclick="redirectToPage('pagina1.html')">
-            <p id="text-a1" class="hidden">PepeCraft</p>
+            <img id="a1" class="interactive-image" src="JuegosA/pepecraft.jpg" onmouseover="toggleImage('a1', 'b1')" onmouseout="toggleImage('a1', 'a1')" onclick="redirectToPage('PepeCraft/')">
+            <a id="text-a1" class="hidden">PepeCraft</a>
           </li>
         </ul>
 	      
