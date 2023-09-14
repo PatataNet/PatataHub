@@ -216,7 +216,7 @@ window.addEventListener('click', function (e) {
     const filter = input.value.toLowerCase();
 
     for (let i = 0; i < items.length; i++) {
-      const text = items[i].querySelector('#textoxd');
+      const text = items[i].querySelector('#texto-xd');
       const texto = text.textContent.toLowerCase();
 
       if (texto.includes(filter)) {
@@ -313,17 +313,13 @@ window.addEventListener('click', function (e) {
             </svg>
           </a>
         </div>
-        <div class="h-128 w-128 bg-white border rounded-lg shadow-md py-4 px-6">
+        <input type="text" id="search-input" placeholder="Buscar juegos" class="buscar"></li>
         <ul class="my-list">
           <li>
             <img id="a1" class="interactive-image" src="JuegosA/pepecraft.jpg" onmouseover="toggleImage('a1', 'b1')" onmouseout="toggleImage('a1', 'a1')" onclick="redirectToPage('PepeCraft/')">
-            <a id="text-a1" class="hidden">PepeCraft</a>
+            <a id="text-a1" class="hidden" id="texto-xd">PepeCraft</a>
           </li>
         </ul>
-	      
-		
-			<br><br><br><br><br><br>
-        </div>
       </section>
     </main>
 <footer>
