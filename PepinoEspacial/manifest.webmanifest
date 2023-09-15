@@ -1,0 +1,12 @@
+{
+  "name": "Pepino Espacial",
+  "short_name": "Pepino Espacial",
+  "id": "com.gdevelop.gdblade",
+  "description": "In this retro space shooter, kill enemies and boss to complete the level.",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
