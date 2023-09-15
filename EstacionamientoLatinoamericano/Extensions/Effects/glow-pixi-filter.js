@@ -1,0 +1,2 @@
+var gdjs;(function(l){l.PixiFiltersTools.registerFilterCreator("Glow",new class extends l.PixiFiltersTools.PixiFilterCreator{makePIXIFilter(r,e){return new PIXI.filters.GlowFilter}updatePreRender(r,e){}updateDoubleParameter(r,e,t){const i=r;e==="innerStrength"?i.innerStrength=t:e==="outerStrength"?i.outerStrength=t:e==="distance"&&(i.distance=t)}updateStringParameter(r,e,t){const i=r;e==="color"&&(i.color=l.PixiFiltersTools.rgbOrHexToHexNumber(t))}updateBooleanParameter(r,e,t){}})})(gdjs||(gdjs={}));
+//# sourceMappingURL=glow-pixi-filter.js.map
