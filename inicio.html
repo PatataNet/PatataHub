@@ -147,6 +147,21 @@ footer {
   list-style-type: none;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#box1 {
+  top: 0;
+  position: relative;
+}
+
+#box2 {
+  top: -290px;
+  right: -265px;
+  position: relative;
+}
 
 </style>
 <script>
@@ -258,8 +273,7 @@ window.addEventListener('click', function (e) {
             </svg>
           </a>
         </div>
-        <ul class="listacuadros">
-        <li><div class="h-72 w-64 bg-white border rounded-lg shadow-md py-4 px-5">
+          <div class="h-72 w-64 bg-white border rounded-lg shadow-md py-4 px-3" id="box1">
 		<div class="gsc-input-box" id="gsc-iw-id1">
     <input id="search-input" type="text" autocomplete="off" name="search" placeholder="Buscar apps" class="apps-input">
 </div>
@@ -275,11 +289,10 @@ window.addEventListener('click', function (e) {
 			<li class="app"><h4 class="my-0 title"><a href="PaintChafita/" id="appxd">Paint Chafa</a></h4></li>
 			<li class="app"><h4 class="my-0 title"><a href="Paint Chafa 2/" id="appxd">Paint Chafa 2</a></h4></li>
 		</ul>
-        </div></li>
-        <li><div class="h-72 w-64 bg-white border rounded-lg shadow-md py-0.5 px-0.5">
+        </div>
+          <div class="h-72 w-64 bg-white border rounded-lg shadow-md py-0.5 px-0.5" id="box2">
 		    <iframe src="https://discord.com/widget?id=1158532984190808114&theme=light" width="250" height="282" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-      </div></li>
-        </ul>
+      </div>
       </section>
     </main>
 <footer>
