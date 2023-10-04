@@ -201,6 +201,30 @@ window.addEventListener('click', function (e) {
 });
 
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('search-input');
+  const list = document.getElementById('my-list');
+  const items = list.getElementsByClassName('juego');
+
+  function buscar() {
+    const filter = input.value.toLowerCase();
+
+    for (let i = 0; i < items.length; i++) {
+      const text = items[i].querySelector('#textoxd');
+      const texto = text.textContent.toLowerCase();
+
+      if (texto.includes(filter)) {
+        items[i].style.display = 'block';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
+  }
+
+  input.addEventListener('input', buscar);
+});
+	</script>
 <div class="flex text-gray-800 min-h-screen">
   <aside class="hidden md:block bg-white px-6 py-5 h-full w-full sm:relative sm:w-64 lg:w-1/5">
     <a href="#" class="flex min-w-max-content items-center font-bold text-lg p-2 mb-12">
