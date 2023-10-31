@@ -5,11 +5,9 @@ nosey=100;
 noseX2=0;
 noseY2=0;
 
-function preload() {
-  clown_nose;
-  clown_nose1;
-  clown_nose2;
-}
+clown_nose = loadImage('');
+clown_nose1 = loadImage('');
+clown_nose2 = loadImage('');
 
 function eliminar(){
   clown_nose = loadImage('');
