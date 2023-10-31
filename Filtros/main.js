@@ -2,15 +2,19 @@ noseX=100;
 noseY=100;
 nosex=100;
 nosey=100;
+noseX2=0;
+noseY2=0;
 
 function preload() {
-  clown_nose = loadImage('censura.png');
-  clown_nose1 = loadImage('cubrebocas.png');
+  clown_nose;
+  clown_nose1;
+  clown_nose2;
 }
 
 function eliminar(){
   clown_nose = loadImage('');
   clown_nose1 = loadImage('');
+  clown_nose2 = loadImage('');
 }
 
 function XD(){
@@ -23,7 +27,7 @@ function censura(){
 }
 
 function shrek(){
-    clown_nose = loadImage('shrek.png');
+    clown_nose2 = loadImage('shrek.png');
 }
 
 function lentes(){
@@ -69,6 +73,7 @@ function draw() {
   image(video, 0, 0, 500, 500);
   image(clown_nose, noseX, noseY, 130, 80);
   image(clown_nose1, nosex, nosey, 130, 140);
+  inage(clown_nose2, noseX2, noseY2, 250, 250);
 }
 
 function modelLoaded() {
@@ -84,9 +89,11 @@ function gotPoses(results)
     noseY = results[0].pose.nose.y-67;
     nosex = results[0].pose.nose.x-65;
     nosey = results[0].pose.nose.y-24;
+    noseX2 = results[0].pose.nose.x;
+    noseY2 = results[0].pose.nose.y;
   }
 }
 
 function take_snapshot(){    
-  save('foto.png');
+  save('FotitoPalInstaXD.png');
 }
