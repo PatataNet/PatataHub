@@ -176,6 +176,62 @@ body {
   }
 
 </style>
+<style>
+  @font-face {
+    font-family: "Geist";
+    src: url("https://pham.codes/d/GeistMonoVF.woff2") format("woff2");
+  }
+
+  .textoxd {
+    font-family: "Geist";
+    font-size: 15px;
+    margin: 0;
+
+    background-color: white;
+    background-image: linear-gradient(0deg, white 60%, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    --wght-min: 32;
+    --wght-max: 240;
+  }
+
+  .textoxd > span {
+    animation: breath 1.5s alternate ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    color: rgba(175, 175, 175, 33);
+  }
+
+  @keyframes breath {
+    0% {
+      font-variation-settings: "wght" var(--wght-min);
+    }
+    100% {
+      font-variation-settings: "wght" var(--wght-max);
+    }
+  }
+
+  /* Setup */
+
+  .containerxd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  html,
+  body {
+    height: 100%;
+    background: #111;
+    color: white;
+  }
+
+</style>
 <script>
   // Obtener elementos del DOM
 const modal = document.getElementById('myModal');
@@ -237,12 +293,24 @@ window.addEventListener('click', function (e) {
   input.addEventListener('input', buscar);
 });
 	</script>
+<script>
+  const spans = document.querySelectorAll('p span');
+
+  const numLetters = spans.length;
+
+  spans.forEach(function(span, i) {
+      const mappedIndex = i - (numLetters / 2)
+      span.style.animationDelay = (mappedIndex * 0.25) + 's';
+  });
+</script>
 <div class="flex text-gray-800 min-h-screen">
   <aside class="hidden md:block bg-white px-6 py-5 h-full w-full sm:relative sm:w-64 lg:w-1/5">
     <a href="#" class="flex min-w-max-content items-center font-bold text-lg p-2 mb-12">
       <img src="https://patatanet.github.io/PatataHub/me.png" width="50">
       <img src="" width="10">
-        PatataHub
+      <p class="textoxd" aria-label="Geist Mono">
+        <span aria-hidden="true">P</span><span aria-hidden="true">a</span><span aria-hidden="true">t</span><span aria-hidden="true">a</span><span aria-hidden="true">t</span><span aria-hidden="true"></span><span aria-hidden="true">a</span><span aria-hidden="true">H</span><span aria-hidden="true">u</span><span aria-hidden="true">b</span>
+      </p>
     </a>
     <nav class="text-gray-600 text-lg font-semibold min-w-max-content space-y-2">
       <a href="#" class="flex items-center flex-shrink-0 px-5 py-3 rounded-full text-indigo-700 bg-indigo-100 bg-opacity-25">
