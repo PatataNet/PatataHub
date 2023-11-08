@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="style/style.css" type="text/css" media="all">
 <link rel="stylesheet" href="https://www.unpkg.com/tailwindcss@1.8.10/dist/tailwind-experimental.min.css" type="text/css" media="all">
 <style>
-	
-footer {
+
+.footer {
         background-color: #E6EBF1;
         border-top: 4px solid #CAD5E3;
         text-align: center;
@@ -27,7 +27,7 @@ footer {
 .TitulosFooter {
         color: #0E1013;
 }	
-	
+
 #my-list li.show {
   display: block;
 }
@@ -35,11 +35,11 @@ footer {
 #my-list2 li.show {
   display: block;
 }
-	
+
   ::-webkit-scrollbar {
     display: none;
-	}
-  
+  }
+
   h3764 {
   -webkit-animation: shift-hue 20s infinite linear;
   animation: shift-hue 20s infinite linear;
@@ -55,23 +55,23 @@ footer {
     filter: hue-rotate(-360deg);
   }
 }
-	
+
 .app {
-	
+
 }
 
 .apps-input {
-	background-color: #F2F2F2;
-  	border-radius: 5px;
-  	border: 2px solid #DDDDDD;
-	outline: none;
-	cursor: pointer;
-	transition: border 0.3s ease-in;
-	padding: 8px;
+  background-color: #F2F2F2;
+    border-radius: 5px;
+    border: 2px solid #DDDDDD;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.3s ease-in;
+  padding: 8px;
 }
-	
+
 .apps-input:hover {
-	border: 2px #939393;
+  border: 2px #939393;
 }
 </style>
 <style>
@@ -162,17 +162,17 @@ body {
   }
 
   #box3 {
-    top: -500px;
+    top: -600px;
     right: -480px;
     position: relative;
-    background-color: rgba(0, 0, 0, 50);
+    background-color: #C7C7C7;
   }
 
   #box4 {
-    top: -750px;
+    top: -900px;
     right: -720px;
     position: relative;
-    background-color: rgba(0, 0, 0, 50);
+    background-color: #C7C7C7;
   }
 
 </style>
@@ -285,7 +285,7 @@ window.addEventListener('click', function (e) {
 
   input.addEventListener('input', buscar);
 });
-	</script>
+  </script>
 <script>
   const spans = document.querySelectorAll('p span');
 
@@ -301,9 +301,7 @@ window.addEventListener('click', function (e) {
     <a href="#" class="flex min-w-max-content items-center font-bold text-lg p-2 mb-12">
       <img src="https://patatanet.github.io/PatataHub/me.png" width="50">
       <img src="" width="10">
-      <p class="textoxd" aria-label="Geist Mono">
-        <span aria-hidden="true">P</span><span aria-hidden="true">a</span><span aria-hidden="true">t</span><span aria-hidden="true">a</span><span aria-hidden="true">t</span><span aria-hidden="true"></span><span aria-hidden="true">a</span><span aria-hidden="true">H</span><span aria-hidden="true">u</span><span aria-hidden="true">b</span>
-      </p>
+      PatataHub
     </a>
     <nav class="text-gray-600 text-lg font-semibold min-w-max-content space-y-2">
       <a href="#" class="flex items-center flex-shrink-0 px-5 py-3 rounded-full text-indigo-700 bg-indigo-100 bg-opacity-25">
@@ -342,7 +340,7 @@ window.addEventListener('click', function (e) {
         <input type="text" class="search-input" name="q" placeholder="Buscar en Google" required>
         <button type="submit" class="search-button">Buscar</button>
     </form>
-         
+
 </div>
 
     </header>
@@ -371,21 +369,21 @@ window.addEventListener('click', function (e) {
           </a>
         </div>
         <div class="h-72 w-64 bg-white border rounded-lg shadow-md py-4 px-1.5" id="box1">
-		<div class="gsc-input-box" id="gsc-iw-id1">
+    <div class="gsc-input-box" id="gsc-iw-id1">
     <input id="search-input" type="text" autocomplete="off" name="search" placeholder="Buscar apps" class="apps-input">
 </div>
- 
-		<br>
-		<ul id="my-list">
-			<li class="app"><h4 class="my-0 title"><a href="PatataGamesInicio" id="appxd">PatataGames</a></h4></li>
-			<li class="app"><h4 class="my-0 title"><a href="PatataNet" id="appxd">PatataNet</a></h4></li>
-			<li class="app"><h4 class="my-0 title"><a href="Novedades/" id="appxd">Novedades</a></h4></li>
-			<li class="app"><h4 class="my-0 title"><a href="InicioPatataPedia" id="appxd">PatataPedia</a></h4></li>
-			<li class="app"><h4 class="my-0 title"><a href="PatataTexto" id="appxd">PatataTexto</a></h4></li>
-			<li class="app"><h4 class="my-0 title"><a href="PatataHack/" id="appxd">PatataHacks</a></h4></li>
-			<li class="app"><h4 class="my-0 title"><a href="PaintChafita/" id="appxd">Paint Chafa</a></h4></li>
-			<li class="app"><h4 class="my-0 title"><a href="Paint Chafa 2/" id="appxd">Paint Chafa 2</a></h4></li>
-		</ul>
+
+    <br>
+    <ul id="my-list">
+      <li class="app"><h4 class="my-0 title"><a href="PatataGamesInicio" id="appxd">PatataGames</a></h4></li>
+      <li class="app"><h4 class="my-0 title"><a href="PatataNet" id="appxd">PatataNet</a></h4></li>
+      <li class="app"><h4 class="my-0 title"><a href="Novedades/" id="appxd">Novedades</a></h4></li>
+      <li class="app"><h4 class="my-0 title"><a href="InicioPatataPedia" id="appxd">PatataPedia</a></h4></li>
+      <li class="app"><h4 class="my-0 title"><a href="PatataTexto" id="appxd">PatataTexto</a></h4></li>
+      <li class="app"><h4 class="my-0 title"><a href="PatataHack/" id="appxd">PatataHacks</a></h4></li>
+      <li class="app"><h4 class="my-0 title"><a href="PaintChafita/" id="appxd">Paint Chafa</a></h4></li>
+      <li class="app"><h4 class="my-0 title"><a href="Paint Chafa 2/" id="appxd">Paint Chafa 2</a></h4></li>
+    </ul>
         </div>
         <div class="h-72 w-64 bg-white border rounded-lg shadow-md py-0.5 px-0.5" id="box2">
           <iframe src="https://discord.com/widget?id=1158532984190808114&theme=light" width="220" height="246" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
